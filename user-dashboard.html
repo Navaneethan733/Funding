@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Founder Dashboard — STACKLY Financial Command</title>
+  <meta name="description" content="STACKLY Founder Financial Command Center: Real-time runway analysis, revenue trajectory, cap table distribution, and burn waterfalls.">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* User Dashboard Specific Styles (Strictly No Buttons) */
+    body {
+      background-color: #f5f7f3;
+      color: #111a14;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .dash-header {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .dash-header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .dash-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .dash-user-badge {
+      background: rgba(212, 232, 76, 0.18);
+      color: var(--lime);
+      border: 1px solid rgba(212, 232, 76, 0.4);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dash-company-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--white);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+    }
+
+    .dash-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.88rem;
+    }
+
+    .dash-nav-link {
+      color: rgba(255, 255, 255, 0.75);
+      transition: color 0.2s;
+    }
+
+    .dash-nav-link:hover {
+      color: var(--lime);
+    }
+
+    /* Main Container */
+    .dash-main {
+      padding: 40px 0 80px;
+    }
+
+    .dash-title-bar {
+      margin-bottom: 32px;
+    }
+
+    .dash-title-bar h1 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+
+    .dash-title-bar p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Section Cards */
+    .dash-section-card {
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .dash-sec-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .dash-sec-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dash-sec-title i {
+      color: var(--green);
+    }
+
+    .dash-sec-tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: var(--cream);
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* KPI Grids */
+    .kpi-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .kpi-card {
+      background: var(--cream);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .kpi-card.hero-kpi {
+      background: var(--green-dark);
+      color: var(--white);
+      border-color: transparent;
+    }
+
+    .kpi-card.hero-kpi .kpi-label {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .kpi-card.hero-kpi .kpi-val {
+      color: var(--lime);
+    }
+
+    .kpi-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .kpi-val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--green-dark);
+      font-family: 'Playfair Display', serif;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .kpi-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .kpi-hero-sub {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* Progress & Meters */
+    .prog-track {
+      background: var(--border-light);
+      height: 10px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .prog-fill {
+      height: 100%;
+      background: var(--green);
+      border-radius: var(--radius-full);
+    }
+
+    /* Tables without buttons */
+    .dash-table-wrap {
+      overflow-x: auto;
+    }
+
+    .dash-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .dash-table th {
+      padding: 14px 18px;
+      background: var(--cream);
+      color: var(--green-dark);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .dash-table td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-dark);
+    }
+
+    .dash-table tr:hover td {
+      background: #fafbf9;
+    }
+
+    /* Badges */
+    .badge-pill {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .badge-active { background: #e6f6ec; color: #1e7e34; }
+    .badge-pending { background: #fff8e1; color: #b78103; }
+    .badge-blue { background: #e8f0fe; color: #1a73e8; }
+
+    /* Department Burn Waterfall */
+    .dept-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .dept-card {
+      background: var(--cream);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+
+    /* Milestone List */
+    .milestone-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .milestone-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 16px 20px;
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--green);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+      .kpi-grid-4, .dept-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .kpi-grid-4, .dept-grid {
+        grid-template-columns: 1fr;
+      }
+      .dash-section-card {
+        padding: 22px 18px;
+      }
+      .dash-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       USER / FOUNDER DASHBOARD HEADER (No Buttons)
+       ======================================================================== -->
+  <header class="dash-header">
+    <div class="container dash-header-flex">
+      <div class="dash-brand-wrap">
+        <a href="index.html" style="display: block;">
+          <img src="images/logo.webp" alt="STACKLY Logo" style="height: 42px; width: auto; filter: brightness(0) invert(1);">
+        </a>
+        <span class="dash-user-badge">FOUNDER PORTAL</span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div class="dash-company-pill">
+          <i class="fa-solid fa-rocket" style="color: var(--lime);"></i> HyperScale AI Inc. • Series A
+        </div>
+
+        <!-- Profile Chip -->
+        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 6px 16px 6px 8px;">
+          <div style="width: 32px; height: 32px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span id="userAvatarInitials" style="font-size: 0.78rem; font-weight: 800; color: var(--green-dark);">U</span>
+          </div>
+          <div style="line-height: 1.2;">
+            <div id="userProfileName" style="font-size: 0.88rem; font-weight: 700; color: var(--white);">User</div>
+            <div style="font-size: 0.72rem; color: var(--lime); font-weight: 600;">Startup Founder</div>
+          </div>
+        </div>
+
+        <div class="dash-nav-links">
+          <a href="login.html" class="dash-nav-link" id="userSignOutBtn">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN DASHBOARD: 6 CONTENT SECTIONS (No Buttons)
+       ======================================================================== -->
+  <main class="dash-main">
+    <div class="container">
+
+      <!-- Title Bar -->
+      <div class="dash-title-bar">
+        <h1>Company Financial Command Center</h1>
+        <p>Live reconciled cash balance, operating runway horizon, ARR velocity, and cap table waterfall.</p>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 1: EXECUTIVE RUNWAY & CASH FLOW SNAPSHOT
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-hourglass-half"></i> Section 1: Operating Runway & Treasury Reserves
+          </div>
+          <span class="dash-sec-tag">Reconciled 2h Ago</span>
+        </div>
+
+        <div class="kpi-grid-4">
+          <div class="kpi-card hero-kpi">
+            <div class="kpi-label">Safe Operating Runway</div>
+            <div class="kpi-val">29.3 Mo</div>
+            <div class="kpi-hero-sub"><i class="fa-solid fa-circle-check" style="color: var(--lime);"></i> Zero-Cash Date: March 2029</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Total Liquid Cash</div>
+            <div class="kpi-val">$4,850,000</div>
+            <div class="kpi-sub" style="color: #299b45;"><i class="fa-solid fa-shield"></i> 100% FDIC Sweep Insured</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Net Monthly Burn</div>
+            <div class="kpi-val">-$165,400</div>
+            <div class="kpi-sub"><i class="fa-solid fa-arrow-down" style="color: #299b45;"></i> Burn reduced by $18K this mo</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Capital Efficiency Multiple</div>
+            <div class="kpi-val">0.92x</div>
+            <div class="kpi-sub" style="color: #299b45;"><i class="fa-solid fa-star"></i> Top Decile SaaS Benchmark</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 2: REVENUE VELOCITY & OPERATING MARGINS
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-arrow-trend-up"></i> Section 2: Revenue Growth & Unit Economics
+          </div>
+          <span class="dash-sec-tag">ASC 606 Compliant</span>
+        </div>
+
+        <div class="kpi-grid-4">
+          <div class="kpi-card">
+            <div class="kpi-label">Monthly Recurring Rev (MRR)</div>
+            <div class="kpi-val" style="font-size: 1.7rem;">$184,200</div>
+            <div class="kpi-sub" style="color: #299b45;">+11.8% Month-over-Month</div>
+            <div class="prog-track"><div class="prog-fill" style="width: 76%;"></div></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Annualized Run Rate (ARR)</div>
+            <div class="kpi-val" style="font-size: 1.7rem;">$2.21M</div>
+            <div class="kpi-sub" style="color: #299b45;">Next Target: $3.0M ARR</div>
+            <div class="prog-track"><div class="prog-fill" style="width: 68%;"></div></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Net Dollar Retention (NDR)</div>
+            <div class="kpi-val" style="font-size: 1.7rem;">124.6%</div>
+            <div class="kpi-sub" style="color: #299b45;">Enterprise Expansion Healthy</div>
+            <div class="prog-track"><div class="prog-fill" style="width: 84%;"></div></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Gross Profit Margin</div>
+            <div class="kpi-val" style="font-size: 1.7rem;">81.2%</div>
+            <div class="kpi-sub" style="color: #299b45;">Pure Software Leverage</div>
+            <div class="prog-track"><div class="prog-fill" style="width: 81%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 3: CONNECTED BANK & PAYMENT PROCESSOR FEEDS
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-link"></i> Section 3: Live Connected Bank & Processor Feeds
+          </div>
+          <span class="dash-sec-tag">Continuous API Sync</span>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Account Identity</th>
+                <th>Institution</th>
+                <th>Reconciled Balance</th>
+                <th>Sync Latency</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Primary Operating Checking</strong></td>
+                <td>Mercury Bank (FDIC Sweep)</td>
+                <td><strong>$2,640,000 USD</strong></td>
+                <td>Sub-second (Live)</td>
+                <td><span class="badge-pill badge-active">Synchronized</span></td>
+              </tr>
+              <tr>
+                <td><strong>High-Yield Treasury T-Bills</strong></td>
+                <td>Morgan Stanley Yield Trust</td>
+                <td><strong>$1,850,000 USD</strong></td>
+                <td>Daily (09:00 AM)</td>
+                <td><span class="badge-pill badge-active">Yield Accruing (4.95%)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Stripe Clearing Vault</strong></td>
+                <td>Stripe Payments Inc.</td>
+                <td><strong>$284,500 USD</strong></td>
+                <td>Webhook Push</td>
+                <td><span class="badge-pill badge-active">Active Inflow</span></td>
+              </tr>
+              <tr>
+                <td><strong>Corporate Card Spend Enclave</strong></td>
+                <td>Brex Credit Facility</td>
+                <td><strong>-$75,500 USD</strong></td>
+                <td>Real-time swipe</td>
+                <td><span class="badge-pill badge-blue">Auto-Settled Monthly</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 4: DEPARTMENTAL BURN WATERFALL & ALLOCATION
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-pie-chart"></i> Section 4: Monthly Operating Expense Distribution
+          </div>
+          <span class="dash-sec-tag">Total Outflow: $349,600 / mo</span>
+        </div>
+
+        <div class="dept-grid">
+          <div class="dept-card">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--green); text-transform: uppercase;">Engineering & R&D</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--green-dark); margin: 6px 0;">$182,000</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">52.1% of Total Burn (14 Engineers)</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 52%;"></div></div>
+            <div style="font-size: 0.75rem; color: #299b45; margin-top: 6px; font-weight: 600;">Eligible for R&D Tax Offset</div>
+          </div>
+
+          <div class="dept-card">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--green); text-transform: uppercase;">Sales & Marketing</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--green-dark); margin: 6px 0;">$84,000</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">24.0% of Total Burn (Growth & Ads)</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 24%;"></div></div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">CAC Payback: 7.2 Months</div>
+          </div>
+
+          <div class="dept-card">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--green); text-transform: uppercase;">Cloud Infrastructure</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--green-dark); margin: 6px 0;">$48,600</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">13.9% of Total Burn (AWS + OpenAI)</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 14%;"></div></div>
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 6px;">Reserved Instances Activated</div>
+          </div>
+
+          <div class="dept-card">
+            <div style="font-size: 0.8rem; font-weight: 700; color: var(--green); text-transform: uppercase;">General & Administrative</div>
+            <div style="font-size: 1.5rem; font-weight: 800; color: var(--green-dark); margin: 6px 0;">$35,000</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">10.0% of Total Burn (Legal, Audit)</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 10%;"></div></div>
+            <div style="font-size: 0.75rem; color: #299b45; margin-top: 6px; font-weight: 600;">Lean Corporate Structure</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 5: CAP TABLE & SHAREHOLDER EQUITY MATRIX
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-users-viewfinder"></i> Section 5: Cap Table & Dilution Waterfall
+          </div>
+          <span class="dash-sec-tag">Post-Series A Valuation: $28.0M</span>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Shareholder Class</th>
+                <th>Ownership %</th>
+                <th>Fully Diluted Shares</th>
+                <th>Share Class Type</th>
+                <th>Vesting Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Founding Team</strong></td>
+                <td><strong>56.4%</strong></td>
+                <td>5,640,000</td>
+                <td>Common Stock</td>
+                <td><span class="badge-pill badge-active">3.2 / 4 Years Vested</span></td>
+              </tr>
+              <tr>
+                <td><strong>Horizon Seed Capital (Lead VC)</strong></td>
+                <td><strong>18.5%</strong></td>
+                <td>1,850,000</td>
+                <td>Series A Preferred</td>
+                <td><span class="badge-pill badge-active">Fully Issued</span></td>
+              </tr>
+              <tr>
+                <td><strong>Employee Incentive Pool (ESOP)</strong></td>
+                <td><strong>14.2%</strong></td>
+                <td>1,420,000</td>
+                <td>Unallocated Options</td>
+                <td><span class="badge-pill badge-blue">Available for Hires</span></td>
+              </tr>
+              <tr>
+                <td><strong>Seed Angel Syndicate</strong></td>
+                <td><strong>10.9%</strong></td>
+                <td>1,090,000</td>
+                <td>Converted Post-Money SAFEs</td>
+                <td><span class="badge-pill badge-active">Fully Converted</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 6: COMPLIANCE SCHEDULE & INVESTOR REPORTING CALENDAR
+           ==================================================================== -->
+      <div class="dash-section-card" style="margin-bottom: 0;">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-calendar-check"></i> Section 6: Governance, Tax & Investor Milestones
+          </div>
+          <span class="dash-sec-tag">Zero Overdue Items</span>
+        </div>
+
+        <div class="milestone-list">
+          <div class="milestone-item">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <i class="fa-solid fa-file-powerpoint" style="color: var(--green); font-size: 1.2rem;"></i>
+              <div>
+                <strong>Q3 Investor Board Update Deck Dispatch</strong>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">STACKLY auto-generates cohort retention curves & P&L summaries for lead VCs.</div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <span class="badge-pill badge-active">Due: Sept 30, 2026</span>
+              <div style="font-size: 0.75rem; color: #299b45; margin-top: 4px;">Data Room 100% Prepared</div>
+            </div>
+          </div>
+
+          <div class="milestone-item">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <i class="fa-solid fa-calculator" style="color: var(--green); font-size: 1.2rem;"></i>
+              <div>
+                <strong>Federal R&D Tax Credit Submission (Form 6765)</strong>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Estimated $142,000 payroll tax credit offset prepared by STACKLY CPAs.</div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <span class="badge-pill badge-active">Due: Oct 15, 2026</span>
+              <div style="font-size: 0.75rem; color: #299b45; margin-top: 4px;">Auditor Verified</div>
+            </div>
+          </div>
+
+          <div class="milestone-item">
+            <div style="display: flex; align-items: center; gap: 14px;">
+              <i class="fa-solid fa-award" style="color: var(--green); font-size: 1.2rem;"></i>
+              <div>
+                <strong>Annual Independent 409A Valuation Refresh</strong>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Required for fair market value strike price assignment on new employee stock option grants.</div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <span class="badge-pill badge-blue">Scheduled: Dec 10, 2026</span>
+              <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 4px;">On Track</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // Populate profile chip from localStorage
+    (function () {
+      const name = localStorage.getItem('stackly_username') || 'User';
+
+      // Name
+      const nameEl = document.getElementById('userProfileName');
+      if (nameEl) nameEl.textContent = name;
+
+      // Initials (first letters of first two words)
+      const initials = name
+        .split(' ')
+        .slice(0, 2)
+        .map(w => w[0] ? w[0].toUpperCase() : '')
+        .join('');
+      const initialsEl = document.getElementById('userAvatarInitials');
+      if (initialsEl) initialsEl.textContent = initials || 'U';
+
+      // Sign out: clear session
+      const signOut = document.getElementById('userSignOutBtn');
+      if (signOut) {
+        signOut.addEventListener('click', () => {
+          localStorage.removeItem('stackly_username');
+          localStorage.removeItem('stackly_role');
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

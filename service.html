@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — STACKLY Financial Clarity & Operations</title>
+  <meta name="description" content="Explore STACKLY's suite of startup financial services: real-time cash flow forecasting, automated bookkeeping, cap table dilution modeling, and investor-ready board reporting.">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="images/logo.webp" alt="STACKLY Logo" style="height: 48px; width: auto; display: block;">
+      </a>
+
+      <!-- Pill Nav for Desktop -->
+      <nav class="nav-pill-wrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="service.html" class="nav-link active">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Header CTA & Contact Phone -->
+      <div class="header-cta-wrapper" style="display: flex; align-items: center; gap: 16px;">
+        <a href="tel:9876543210" class="header-phone-link" style="color: rgba(255,255,255,0.9); font-size: 0.86rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;">
+          <i class="fa-solid fa-phone" style="color: var(--lime); font-size: 0.8rem;"></i> +91 98765 43210
+        </a>
+        <a href="login.html" class="btn btn-lime header-cta-btn">
+          Login <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-dropdown" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="service.html" class="nav-link active">Services</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <div style="padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 6px;">
+        <a href="tel:9876543210" style="color: var(--lime); font-weight: 700; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-phone"></i> +91 98765 43210
+        </a>
+        <span><i class="fa-solid fa-location-dot" style="color: var(--lime); margin-right: 6px;"></i> Salem, Tamil Nadu, India</span>
+      </div>
+      <a href="login.html" class="btn btn-lime" style="margin-top: 6px; width: 100%;">
+        Login <i class="fa-solid fa-arrow-trend-up"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECTION 1: HERO SECTION (Scroll Animation)
+       ======================================================================== -->
+  <div class="page-hero-wrapper" id="service-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-content scroll-reveal">
+        <div class="section-tag-pill">
+          <i class="fa-solid fa-chart-line"></i> Institutional-Grade Financial Operations
+        </div>
+        <h1 class="page-hero-title">Financial engineering engineered for hypergrowth founders.</h1>
+        <p class="page-hero-desc">
+          Say goodbye to delayed monthly closes and blind budgeting. STACKLY pairs real-time automated ledger tracking with strategic fractional CFO advisory to keep your runway clear and your cap table clean.
+        </p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="#service-portfolio" class="btn btn-lime">
+            Explore All Services <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="contact.html" class="btn btn-ghost-green">
+            Schedule CFO Consultation <i class="fa-solid fa-arrow-trend-up"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-hero-visual reveal-right">
+        <div class="page-hero-img-card">
+          <img src="images/img_1551836022-d5d8.webp" alt="Executive team reviewing financial analytics dashboard">
+          <div class="hero-floating-stat">
+            <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <div style="font-size: 1.25rem; font-weight: 800; color: var(--lime);">$3.8B+</div>
+              <div style="font-size: 0.82rem; color: rgba(255,255,255,0.85);">Founder Capital Monitored</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 2: CORE SERVICE PORTFOLIO (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="service-portfolio">
+    <div class="container">
+      <div style="text-align: center; max-width: 760px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-cubes"></i> What We Deliver
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.8rem); color: var(--green-dark); margin-bottom: 16px;">
+          End-to-End Financial Intelligence Suite
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          From raw bank data ingestion to investor board decks, every layer of your company's fiscal architecture is streamlined, verified, and automated.
+        </p>
+      </div>
+
+      <div class="services-card-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card scroll-reveal">
+          <img src="images/img_1460925895917-a.webp" alt="Real-time cash flow dashboard" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Core Engine</span>
+            <h3 class="service-title">Real-Time Cash Flow & Runway Modeling</h3>
+            <p class="service-text">
+              Dynamic multi-scenario simulations predicting cash out dates based on hiring velocity, customer churn, and seasonal burn swings with live bank sync.
+            </p>
+            <ul class="service-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Automated zero-cash horizon alerts</li>
+              <li><i class="fa-solid fa-circle-check"></i> Conservative, Base, and Aggressive scenario toggles</li>
+              <li><i class="fa-solid fa-circle-check"></i> Headcount and vendor price inflation modeling</li>
+            </ul>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="images/img_1554224155-8d04.webp" alt="Automated bookkeeping calculations" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Daily Operations</span>
+            <h3 class="service-title">Continuous AI Bookkeeping & Reconciliation</h3>
+            <p class="service-text">
+              Close your monthly books in 48 hours instead of 3 weeks. Intelligent machine-learning rules categorize millions in transactions with CPA verification.
+            </p>
+            <ul class="service-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> 99.6% automated classification accuracy</li>
+              <li><i class="fa-solid fa-circle-check"></i> Multi-entity GAAP & IFRS compliant ledger</li>
+              <li><i class="fa-solid fa-circle-check"></i> Receipt capture via Slack and corporate email</li>
+            </ul>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="images/img_1526304640581-d.webp" alt="Cap table and investment graph" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Fundraising</span>
+            <h3 class="service-title">Cap Table & Equity Dilution Simulation</h3>
+            <p class="service-text">
+              Model complex priced rounds, convertible notes, SAFE notes with MFN clauses, and employee option pools to protect founder ownership.
+            </p>
+            <ul class="service-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Interactive post-money waterfall calculations</li>
+              <li><i class="fa-solid fa-circle-check"></i> Option pool refresh impact preview</li>
+              <li><i class="fa-solid fa-circle-check"></i> Direct Carta & Pulley sync support</li>
+            </ul>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card scroll-reveal">
+          <img src="images/img_1559526324-4b87.webp" alt="Global currency and treasury management" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Treasury</span>
+            <h3 class="service-title">Global Treasury & FX Hedging</h3>
+            <p class="service-text">
+              Safeguard operating capital across multiple international jurisdictions with yield-optimizing treasury accounts and risk-minimized currency conversions.
+            </p>
+            <ul class="service-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Multi-currency accounts (USD, EUR, GBP, INR)</li>
+              <li><i class="fa-solid fa-circle-check"></i> T-bill and money market automated sweeps</li>
+              <li><i class="fa-solid fa-circle-check"></i> Up to $5M FDIC insured deposit structuring</li>
+            </ul>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="service-card scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="images/img_1557804506-669a.webp" alt="Investor board reporting meetings" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Governance</span>
+            <h3 class="service-title">Investor-Grade Board Decks & KPI Portals</h3>
+            <p class="service-text">
+              Generate one-click quarterly updates, CAC payback curves, net revenue retention (NRR) matrices, and burn multiple analyses that impress VCs.
+            </p>
+            <ul class="service-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> 1-click export to PDF, Google Slides, and Excel</li>
+              <li><i class="fa-solid fa-circle-check"></i> Shareable interactive read-only investor links</li>
+              <li><i class="fa-solid fa-circle-check"></i> Benchmark your metrics against top quartile SaaS</li>
+            </ul>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="service-card scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="images/img_1450133064473-7.webp" alt="Tax compliance documents" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Compliance</span>
+            <h3 class="service-title">R&D Tax Credit & State/Federal Compliance</h3>
+            <p class="service-text">
+              Reclaim up to $500,000 annually in non-dilutive federal and state research credits while maintaining bulletproof audit trail documentation.
+            </p>
+            <ul class="service-bullets">
+              <li><i class="fa-solid fa-circle-check"></i> Payroll tax credit offset integration</li>
+              <li><i class="fa-solid fa-circle-check"></i> State franchise tax & Delaware compliance checks</li>
+              <li><i class="fa-solid fa-circle-check"></i> CPA audit defense guarantee</li>
+            </ul>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 3: STEP-BY-STEP WORKFLOW (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 90px 0; background-color: var(--cream);" id="service-workflow">
+    <div class="container">
+      <div style="text-align: center; max-width: 700px; margin: 0 auto 20px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-route"></i> The STACKLY Blueprint
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.6rem); color: var(--green-dark); margin-bottom: 14px;">
+          How We Operationalize Your Startup Finance in 4 Days
+        </h2>
+        <p style="color: var(--text-muted);">
+          A battle-tested onboarding pipeline engineered to minimize founder friction and deliver financial clarity immediately.
+        </p>
+      </div>
+
+      <div class="process-grid">
+        <!-- Step 1 -->
+        <div class="process-step-card scroll-reveal">
+          <div class="process-num">01</div>
+          <h4 style="font-size: 1.18rem; color: var(--green-dark); margin-bottom: 10px;">Zero-Touch Integration</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Connect your bank accounts (Mercury, Brex, Chase), payroll (Gusto, Rippling), and payment processors (Stripe) in under 120 seconds via read-only APIs.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step-card scroll-reveal" style="transition-delay: 0.1s;">
+          <div class="process-num">02</div>
+          <h4 style="font-size: 1.18rem; color: var(--green-dark); margin-bottom: 10px;">Historical Cleanup & Audit</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Our AI engine and senior CPAs scrub past ledgers, eliminate phantom software subscriptions, and reconstruct clean accrual-basis books.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step-card scroll-reveal" style="transition-delay: 0.2s;">
+          <div class="process-num">03</div>
+          <h4 style="font-size: 1.18rem; color: var(--green-dark); margin-bottom: 10px;">Tailored Runway Engine</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            We calibrate a bespoke cash burn algorithm matching your business model, customer renewal cadence, and planned technical hires.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step-card scroll-reveal" style="transition-delay: 0.3s;">
+          <div class="process-num">04</div>
+          <h4 style="font-size: 1.18rem; color: var(--green-dark); margin-bottom: 10px;">Ongoing Fractional CFO</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Receive monthly strategic reviews, live board presentations, and proactive advisory before initiating subsequent funding rounds.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 4: TECHNOLOGY STACK & CAPABILITY SPOTLIGHT (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="service-tech-stack">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        <div class="reveal-left">
+          <div class="section-tag-pill dark-tag">
+            <i class="fa-solid fa-microchip"></i> Proprietary Infrastructure
+          </div>
+          <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 20px; line-height: 1.2;">
+            Bank-grade reliability meets intuitive executive controls.
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.02rem; line-height: 1.65; margin-bottom: 24px;">
+            Legacy accounting suites were built for brick-and-mortar storefronts in 1998. STACKLY is architected for modern software companies operating across borderless remote teams, multi-currency wallets, and flexible microservices.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 18px; margin-bottom: 30px;">
+            <div style="background: var(--cream); border-radius: var(--radius-sm); padding: 16px 20px; border-left: 4px solid var(--green);">
+              <strong style="color: var(--green-dark); display: block; font-size: 1rem; margin-bottom: 4px;">Sub-Second Sync Frequency</strong>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Continuous webhooks ensure your dashboard reflects transactions the second they clear the clearinghouse.</p>
+            </div>
+
+            <div style="background: var(--cream); border-radius: var(--radius-sm); padding: 16px 20px; border-left: 4px solid var(--lime-hover);">
+              <strong style="color: var(--green-dark); display: block; font-size: 1rem; margin-bottom: 4px;">Granular Permission Enclaves</strong>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Give department heads access to their specific team budgets without exposing executive payroll or cap table details.</p>
+            </div>
+
+            <div style="background: var(--cream); border-radius: var(--radius-sm); padding: 16px 20px; border-left: 4px solid var(--green);">
+              <strong style="color: var(--green-dark); display: block; font-size: 1rem; margin-bottom: 4px;">Automated Anomaly Alerting</strong>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin: 0;">Instantly detects duplicate SaaS subscriptions, unexpected AWS cloud spikes, and unverified vendor payments.</p>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-lime">Request Live Architecture Walkthrough <i class="fa-solid fa-arrow-trend-up"></i></a>
+        </div>
+
+        <div class="reveal-right">
+          <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 1.5px solid var(--border-light);">
+            <img src="images/img_1551288049-bebd.webp" alt="Advanced data visualization interface" style="width: 100%; height: 480px; object-fit: cover;">
+            <div style="position: absolute; top: 24px; right: 24px; background: rgba(10, 45, 35, 0.9); backdrop-filter: blur(10px); color: var(--white); padding: 12px 20px; border-radius: var(--radius-full); font-size: 0.82rem; font-weight: 700; border: 1px solid rgba(212, 232, 76, 0.4); display: flex; align-items: center; gap: 8px;">
+              <span style="width: 8px; height: 8px; background: var(--lime); border-radius: 50%; display: inline-block;"></span> 99.99% Cloud Uptime SLA
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 5: SPECIALIZED INDUSTRY VERTICALS (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--cream);" id="service-industries">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-layer-group"></i> Industry Specializations
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Calibrated for Modern Business Models
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Every startup vertical carries unique revenue recognition mechanics and unit economics. We tailor our accounting workflows accordingly.
+        </p>
+      </div>
+
+      <div class="industry-grid">
+        <!-- Vertical 1 -->
+        <div class="industry-card scroll-reveal">
+          <img src="images/img_1504384308090-c.webp" alt="SaaS cloud infrastructure" class="industry-card-bg">
+          <div class="industry-card-content">
+            <span style="color: var(--lime); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">B2B Software</span>
+            <h4 style="font-size: 1.3rem; margin: 6px 0 8px;">SaaS & Subscriptions</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 14px;">
+              ASC 606 deferred revenue schedules, net revenue retention tracking, and churn cohort analysis.
+            </p>
+            <a href="404.html" style="color: var(--lime); font-size: 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              Explore SaaS Model <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Vertical 2 -->
+        <div class="industry-card scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="images/img_1618005182384-a.webp" alt="AI GPU Computing Network" class="industry-card-bg">
+          <div class="industry-card-content">
+            <span style="color: var(--lime); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Artificial Intelligence</span>
+            <h4 style="font-size: 1.3rem; margin: 6px 0 8px;">AI / ML Deeptech</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 14px;">
+              GPU server cluster amortization, compute burn modeling, and Section 174 software capitalization.
+            </p>
+            <a href="404.html" style="color: var(--lime); font-size: 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              Explore Deeptech Model <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Vertical 3 -->
+        <div class="industry-card scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="images/img_ecommerce.webp" alt="E-commerce and modern retail packaging" class="industry-card-bg">
+          <div class="industry-card-content">
+            <span style="color: var(--lime); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Consumer & DTC</span>
+            <h4 style="font-size: 1.3rem; margin: 6px 0 8px;">Direct-to-Consumer</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 14px;">
+              Inventory landed-cost calculations, multi-channel payment reconciliation (Shopify, Amazon), and ad spend ROAS margins.
+            </p>
+            <a href="404.html" style="color: var(--lime); font-size: 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              Explore DTC Model <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Vertical 4 -->
+        <div class="industry-card scroll-reveal" style="transition-delay: 0.3s;">
+          <img src="images/img_1563986768609-3.webp" alt="Fintech transactions digital graphic" class="industry-card-bg">
+          <div class="industry-card-content">
+            <span style="color: var(--lime); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">Financial Services</span>
+            <h4 style="font-size: 1.3rem; margin: 6px 0 8px;">Marketplaces & Fintech</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85); line-height: 1.5; margin-bottom: 14px;">
+              FBO user account balancing, take-rate margin analytics, regulatory reserve reserves, and anti-fraud reserve funds.
+            </p>
+            <a href="404.html" style="color: var(--lime); font-size: 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 6px;">
+              Explore Marketplace Model <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 6: CLIENT RESULTS & PROVEN CASE STUDIES (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="service-case-studies">
+    <div class="container">
+      <div style="text-align: center; max-width: 740px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-trophy"></i> Measurable Outcomes
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Transforming Chaos into Capital Efficiency
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          See how leading venture-backed founders leveraged STACKLY to conserve capital, close rounds faster, and expand runway.
+        </p>
+      </div>
+
+      <div class="case-study-grid">
+        <!-- Case Study 1 -->
+        <div class="case-card scroll-reveal">
+          <div>
+            <div class="case-stat-big">+14.2 Mo</div>
+            <div style="font-weight: 700; color: var(--green); font-size: 0.95rem; margin-bottom: 12px;">Runway Extended</div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+              "STACKLY surfaced $28,000/month in duplicate API and cloud infrastructure waste within 72 hours of syncing. We extended our pre-Series A runway without laying off a single engineer."
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border-light); padding-top: 18px;">
+            <img src="images/img_1534528741775-5.webp" alt="Elena Vance founder portrait" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+            <div>
+              <div style="font-weight: 700; color: var(--text-dark); font-size: 0.92rem;">Elena Vance</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Co-Founder & CEO, HyperScale AI</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-card scroll-reveal" style="transition-delay: 0.1s;">
+          <div>
+            <div class="case-stat-big">$380,000</div>
+            <div style="font-weight: 700; color: var(--green); font-size: 0.95rem; margin-bottom: 12px;">Tax Credits Reclaimed</div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+              "Their automated R&D credit filing identified software engineering expenses our previous big-four accounting firm completely missed. That non-dilutive check paid for our entire year's operations."
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border-light); padding-top: 18px;">
+            <img src="images/img_1507003211169-0.webp" alt="Marcus Chen founder portrait" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+            <div>
+              <div style="font-weight: 700; color: var(--text-dark); font-size: 0.92rem;">Marcus Chen</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">CTO, SecureMesh Cyber</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-card scroll-reveal" style="transition-delay: 0.2s;">
+          <div>
+            <div class="case-stat-big">48 Hours</div>
+            <div style="font-weight: 700; color: var(--green); font-size: 0.95rem; margin-bottom: 12px;">Monthly Close Time</div>
+            <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+              "Preparing for our Series B due diligence data room used to give me panic attacks. With STACKLY, the lead VC's audit partners completed their financial review in 3 days with zero discrepancies."
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border-light); padding-top: 18px;">
+            <img src="images/img_1573496359142-b.webp" alt="Sarah Jenkins COO portrait" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+            <div>
+              <div style="font-weight: 700; color: var(--text-dark); font-size: 0.92rem;">Sarah Jenkins</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">COO, LedgerPay Global</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 7: SERVICE CTA & AUDIT BANNER (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--green-dark);" id="service-cta">
+    <div class="container">
+      <div class="cta-banner-card scroll-reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.12);">
+        <div class="cta-banner-content" style="text-align: center; max-width: 820px; margin: 0 auto;">
+          <div class="section-tag-pill" style="margin-bottom: 20px;">
+            <i class="fa-solid fa-sparkles"></i> 100% Complimentary
+          </div>
+          <h2 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); color: var(--white); margin-bottom: 18px; line-height: 1.15;">
+            Get a Complete Financial & Runway Health Audit
+          </h2>
+          <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6; margin-bottom: 34px;">
+            Our senior finance team will analyze your burn rate, identify recurring subscription leaks, and generate a custom 24-month survival model within 48 hours.
+          </p>
+
+          <form class="subscribe-form" action="404.html" method="get" onsubmit="window.location.href='404.html'; return false;" style="max-width: 540px; margin: 0 auto 24px;">
+            <input type="email" class="subscribe-input" placeholder="Enter your work email address" required>
+            <button type="submit" class="subscribe-btn">
+              Claim Free Audit <i class="fa-solid fa-arrow-trend-up"></i>
+            </button>
+          </form>
+
+          <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; color: rgba(255,255,255,0.7); font-size: 0.88rem;">
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> No credit card required</span>
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> Strict NDA confidentiality</span>
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> 48-Hour delivery SLA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer id="footer">
+    <div class="container">
+      <!-- STACKLY Company Headquarters & Contact Info Bar -->
+      <div style="background: var(--cream); border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 30px 36px; margin-bottom: 50px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="background: var(--green); border-radius: 14px; padding: 6px 10px; display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.webp" alt="STACKLY Logo" style="height: 40px; width: auto; display: block; filter: brightness(0) invert(1);">
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; color: var(--green-dark); margin-bottom: 2px;">STACKLY Technologies Inc.</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 7px;">
+              <i class="fa-solid fa-location-dot" style="color: var(--green);"></i> Salem, Tamil Nadu, India
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <a href="tel:9876543210" style="background: var(--white); border: 1.5px solid var(--border-light); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm); transition: var(--transition);">
+            <i class="fa-solid fa-phone" style="color: #299b45;"></i> +91 98765 43210
+          </a>
+          <a href="mailto:contact@stackly.com" style="background: var(--green); color: var(--white); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; transition: var(--transition);">
+            <i class="fa-solid fa-envelope" style="color: var(--lime);"></i> contact@stackly.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-grid">
+        <div class="footer-col">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Discover</h5>
+          <ul>
+            <li><a href="404.html">Terms & Privacy</a></li>
+            <li><a href="404.html">Security</a></li>
+            <li><a href="404.html">Changelog</a></li>
+            <li><a href="404.html">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="404.html">About STACKLY</a></li>
+            <li><a href="404.html">Salem Headquarters</a></li>
+            <li><a href="404.html">Careers</a></li>
+            <li><a href="404.html">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Insights</h5>
+          <ul>
+            <li><a href="404.html">Startup Blog</a></li>
+            <li><a href="404.html">Runway Calculator</a></li>
+            <li><a href="404.html">Cap Table Guide</a></li>
+            <li><a href="404.html">License</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Help & Support</h5>
+          <ul>
+            <li><a href="404.html">Ph: +91 98765 43210</a></li>
+            <li><a href="404.html">Salem, Tamil Nadu, India</a></li>
+            <li><a href="404.html">Documentation</a></li>
+            <li><a href="404.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <!-- Social Icons -->
+        <div class="footer-social-links">
+          <a href="404.html" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Twitter / X"><span style="font-size: 1rem; font-weight: 700; font-family: serif; line-height: 1;">𝕏</span></a>
+        </div>
+
+        <!-- App Store Buttons -->
+        <div class="footer-app-badges">
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-android"></i> Download on Android
+          </a>
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-apple"></i> Download on iOS
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <span>© STACKLY 2024. All rights reserved. Salem, Tamil Nadu, India. Ph: <a href="tel:9876543210" style="color: var(--green); font-weight: 700;">+91 98765 43210</a></span>
+          <span>Financial Clarity for Startup Founders</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       JAVASCRIPT: INTERSECTION OBSERVER SCROLL ANIMATIONS & MOBILE MENU
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sticky header
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener('click', () => {
+          mobileNav.classList.toggle('open');
+          const isOpen = mobileNav.classList.contains('open');
+          mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll('.mobile-dropdown .nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      // Intersection Observer for Scroll Animations
+      const animElements = document.querySelectorAll('.scroll-reveal, .reveal-left, .reveal-right, .reveal-scale, .fade-in-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      animElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

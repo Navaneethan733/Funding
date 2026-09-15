@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — STACKLY Platform Intelligence</title>
+  <meta name="description" content="STACKLY Institutional Admin Dashboard: Real-time platform oversight, multi-tenant monitoring, liquidity enclaves, and regulatory audit streams.">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Dashboard Specific Styles (Strictly No Buttons) */
+    body {
+      background-color: #f6f8f5;
+      color: #111a14;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .dash-header {
+      background: var(--green-dark);
+      color: var(--white);
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .dash-header-flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .dash-brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .dash-role-badge {
+      background: rgba(212, 232, 76, 0.18);
+      color: var(--lime);
+      border: 1px solid rgba(212, 232, 76, 0.4);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .dash-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.08);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+    }
+
+    .dash-status-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--lime);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--lime);
+    }
+
+    .dash-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.88rem;
+    }
+
+    .dash-nav-link {
+      color: rgba(255, 255, 255, 0.75);
+      transition: color 0.2s;
+    }
+
+    .dash-nav-link:hover {
+      color: var(--lime);
+    }
+
+    /* Dashboard Main Container */
+    .dash-main {
+      padding: 40px 0 80px;
+    }
+
+    .dash-title-bar {
+      margin-bottom: 32px;
+    }
+
+    .dash-title-bar h1 {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      color: var(--green-dark);
+      margin-bottom: 6px;
+    }
+
+    .dash-title-bar p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Section Card Styles */
+    .dash-section-card {
+      background: var(--white);
+      border: 1.5px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .dash-sec-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .dash-sec-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .dash-sec-title i {
+      color: var(--green);
+    }
+
+    .dash-sec-tag {
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: var(--cream);
+      color: var(--text-muted);
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Grid Layouts for Sections */
+    .kpi-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .kpi-card {
+      background: var(--cream);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      position: relative;
+    }
+
+    .kpi-card.highlight {
+      background: var(--green-dark);
+      color: var(--white);
+      border-color: transparent;
+    }
+
+    .kpi-card.highlight .kpi-label {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .kpi-card.highlight .kpi-val {
+      color: var(--lime);
+    }
+
+    .kpi-label {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .kpi-val {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--green-dark);
+      font-family: 'Playfair Display', serif;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .kpi-change {
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .kpi-up { color: #299b45; }
+    .kpi-warn { color: #d49511; }
+
+    /* Tables without buttons */
+    .dash-table-wrap {
+      overflow-x: auto;
+    }
+
+    .dash-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: left;
+    }
+
+    .dash-table th {
+      padding: 14px 18px;
+      background: var(--cream);
+      color: var(--green-dark);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-bottom: 2px solid var(--border-light);
+    }
+
+    .dash-table td {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-dark);
+    }
+
+    .dash-table tr:hover td {
+      background: #fafbf9;
+    }
+
+    /* Badges */
+    .badge-pill {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .badge-healthy { background: #e6f6ec; color: #1e7e34; }
+    .badge-warning { background: #fff8e1; color: #b78103; }
+    .badge-secure { background: #e8f0fe; color: #1a73e8; }
+    .badge-audit { background: #f3e8fd; color: #7b1fa2; }
+
+    /* Progress bar displays */
+    .prog-track {
+      background: var(--border-light);
+      height: 8px;
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      margin-top: 6px;
+    }
+
+    .prog-fill {
+      height: 100%;
+      background: var(--green);
+      border-radius: var(--radius-full);
+    }
+
+    /* Stream Feed */
+    .stream-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .stream-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 14px 18px;
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      border-left: 4px solid var(--green);
+      font-size: 0.88rem;
+    }
+
+    .stream-item.warn-item {
+      border-left-color: #d49511;
+      background: #fffdf5;
+    }
+
+    /* Mobile overrides */
+    @media (max-width: 1024px) {
+      .kpi-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .kpi-grid-4 {
+        grid-template-columns: 1fr;
+      }
+      .dash-section-card {
+        padding: 22px 18px;
+      }
+      .dash-header-flex {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       ADMIN DASHBOARD HEADER (No Buttons)
+       ======================================================================== -->
+  <header class="dash-header">
+    <div class="container dash-header-flex">
+      <div class="dash-brand-wrap">
+        <a href="index.html" style="display: block;">
+          <img src="images/logo.webp" alt="STACKLY Logo" style="height: 42px; width: auto; filter: brightness(0) invert(1);">
+        </a>
+        <span class="dash-role-badge">ADMIN CONSOLE</span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+        <div class="dash-status-pill">
+          <span class="dash-status-dot"></span> Cluster Node: Asia-South (Salem Enclave)
+        </div>
+
+        <!-- Profile Chip -->
+        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 6px 16px 6px 8px;">
+          <div style="width: 32px; height: 32px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+            <span id="adminAvatarInitials" style="font-size: 0.78rem; font-weight: 800; color: var(--green-dark);">A</span>
+          </div>
+          <div style="line-height: 1.2;">
+            <div id="adminProfileName" style="font-size: 0.88rem; font-weight: 700; color: var(--white);">Admin</div>
+            <div style="font-size: 0.72rem; color: var(--lime); font-weight: 600;">Platform Administrator</div>
+          </div>
+        </div>
+
+        <div class="dash-nav-links">
+          <a href="login.html" class="dash-nav-link" id="adminSignOutBtn">Sign Out</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN DASHBOARD: 6 SECTIONS (No Buttons)
+       ======================================================================== -->
+  <main class="dash-main">
+    <div class="container">
+      
+      <!-- Dashboard Title Bar -->
+      <div class="dash-title-bar">
+        <h1>Institutional Platform Governance</h1>
+        <p>Continuous telemetry, multi-tenant portfolio metrics, and ledger reconciliation feeds across 482 active startups.</p>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 1: GLOBAL PLATFORM HEALTH & SYSTEM KPI MATRIX
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-chart-line"></i> Section 1: Global Platform Telemetry & Volume
+          </div>
+          <span class="dash-sec-tag">Real-Time Sensor 100ms</span>
+        </div>
+
+        <div class="kpi-grid-4">
+          <div class="kpi-card highlight">
+            <div class="kpi-label">Monitored Capital (AUM)</div>
+            <div class="kpi-val">$3.84B</div>
+            <div class="kpi-change" style="color: var(--lime);"><i class="fa-solid fa-arrow-trend-up"></i> +14.2% vs previous quarter</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Active Startup Accounts</div>
+            <div class="kpi-val">482</div>
+            <div class="kpi-change kpi-up"><i class="fa-solid fa-circle-check"></i> 100% GAAP / IFRS Verified</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Daily Cleared Volume</div>
+            <div class="kpi-val">$24.8M</div>
+            <div class="kpi-change kpi-up"><i class="fa-solid fa-bolt"></i> 48,290 Transactions / Day</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">AI Auto-Reconcile Accuracy</div>
+            <div class="kpi-val">99.82%</div>
+            <div class="kpi-change kpi-up"><i class="fa-solid fa-shield-check"></i> Zero Ledger Discrepancies</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 2: ENTERPRISE TENANT & PORTFOLIO OVERSIGHT
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-building-columns"></i> Section 2: Portfolio Companies & Runway Health
+          </div>
+          <span class="dash-sec-tag">Active Seed & Series Cohorts</span>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Startup Entity</th>
+                <th>Stage</th>
+                <th>Cash Reserves</th>
+                <th>Monthly Net Burn</th>
+                <th>Runway Horizon</th>
+                <th>Risk State</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>HyperScale AI Inc.</strong></td>
+                <td>Series A</td>
+                <td>$4,850,000</td>
+                <td>-$165,000 / mo</td>
+                <td>29.3 Months</td>
+                <td><span class="badge-pill badge-healthy">Optimal Runway</span></td>
+              </tr>
+              <tr>
+                <td><strong>CloudFlow Networks</strong></td>
+                <td>Seed</td>
+                <td>$1,420,000</td>
+                <td>-$95,000 / mo</td>
+                <td>14.9 Months</td>
+                <td><span class="badge-pill badge-healthy">Healthy</span></td>
+              </tr>
+              <tr>
+                <td><strong>NovaHealth BioTech</strong></td>
+                <td>Series B</td>
+                <td>$12,200,000</td>
+                <td>-$480,000 / mo</td>
+                <td>25.4 Months</td>
+                <td><span class="badge-pill badge-healthy">Optimal Runway</span></td>
+              </tr>
+              <tr>
+                <td><strong>LedgerPay Global</strong></td>
+                <td>Series A</td>
+                <td>$2,100,000</td>
+                <td>-$210,000 / mo</td>
+                <td>10.0 Months</td>
+                <td><span class="badge-pill badge-warning">Fundraising Prep</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vortex Robotics</strong></td>
+                <td>Pre-Seed</td>
+                <td>$680,000</td>
+                <td>-$42,000 / mo</td>
+                <td>16.1 Months</td>
+                <td><span class="badge-pill badge-healthy">Healthy</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 3: GLOBAL LIQUIDITY & MULTI-CURRENCY TREASURY ENCLAVES
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-vault"></i> Section 3: Treasury Enclaves & Sweep Balances
+          </div>
+          <span class="dash-sec-tag">FDIC Insured Sweep Network</span>
+        </div>
+
+        <div class="kpi-grid-4">
+          <div class="kpi-card">
+            <div class="kpi-label">Federal T-Bill Enclave</div>
+            <div class="kpi-val" style="font-size: 1.65rem;">$1.92B</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">4.95% Weighted Yield Annualized</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 78%;"></div></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">Tier-1 Commercial Cash</div>
+            <div class="kpi-val" style="font-size: 1.65rem;">$1.14B</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">JP Morgan & Mercury Custody</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 58%;"></div></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">EUR / GBP Currency Reserves</div>
+            <div class="kpi-val" style="font-size: 1.65rem;">€420M</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">Automated Forward FX Hedging</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 44%;"></div></div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-label">INR Operational Escrow</div>
+            <div class="kpi-val" style="font-size: 1.65rem;">₹2,850 Cr</div>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px;">Salem & Bengaluru Hub Payroll</p>
+            <div class="prog-track"><div class="prog-fill" style="width: 62%;"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 4: AI RECONCILIATION & TRANSACTION INGESTION FEED
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-microchip"></i> Section 4: Live Ledger Ingestion Stream
+          </div>
+          <span class="dash-sec-tag">Sub-Second Processing</span>
+        </div>
+
+        <div class="stream-feed">
+          <div class="stream-item">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-circle-check" style="color: #299b45;"></i>
+              <div>
+                <strong>HyperScale AI Inc.</strong> — AWS Infrastructure Cloud Bill Reconciliation
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Card: Brex Corporate • Category: Cloud & Server Compute (ASC 350)</div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <strong style="color: var(--green-dark); font-size: 0.95rem;">-$32,490.00 USD</strong>
+              <div style="font-size: 0.75rem; color: #299b45; font-weight: 700;">99.9% Confidence Match</div>
+            </div>
+          </div>
+
+          <div class="stream-item">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-circle-check" style="color: #299b45;"></i>
+              <div>
+                <strong>CloudFlow Networks</strong> — Stripe Merchant Clearing Batch Deposit
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Source: Stripe Payout • Category: SaaS Subscription Revenue (ASC 606)</div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <strong style="color: #299b45; font-size: 0.95rem;">+$148,220.50 USD</strong>
+              <div style="font-size: 0.75rem; color: #299b45; font-weight: 700;">Auto-Reconciled to Ledger</div>
+            </div>
+          </div>
+
+          <div class="stream-item">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-circle-check" style="color: #299b45;"></i>
+              <div>
+                <strong>NovaHealth BioTech</strong> — Research Laboratory Contract Payroll
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Source: Rippling Global • Category: Qualified R&D Expense (Section 174)</div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <strong style="color: var(--green-dark); font-size: 0.95rem;">-$84,100.00 USD</strong>
+              <div style="font-size: 0.75rem; color: #299b45; font-weight: 700;">R&D Credit Tag Applied</div>
+            </div>
+          </div>
+
+          <div class="stream-item">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-circle-check" style="color: #299b45;"></i>
+              <div>
+                <strong>Vortex Robotics</strong> — Federal IRS Employee Retention Tax Offset
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Source: US Treasury ACH • Category: Non-Dilutive Grant Credit</div>
+              </div>
+            </div>
+            <div style="text-align: right;">
+              <strong style="color: #299b45; font-size: 0.95rem;">+$64,000.00 USD</strong>
+              <div style="font-size: 0.75rem; color: #299b45; font-weight: 700;">Direct Treasury Credit</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 5: RISK EXPOSURE & ANOMALY DETECTION WATCHLIST
+           ==================================================================== -->
+      <div class="dash-section-card">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-triangle-exclamation" style="color: #d49511;"></i> Section 5: Risk Monitoring & Burn Acceleration Radar
+          </div>
+          <span class="dash-sec-tag">Automated Threat Engine</span>
+        </div>
+
+        <div class="stream-feed">
+          <div class="stream-item warn-item">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-bell" style="color: #d49511;"></i>
+              <div>
+                <strong>Duplicate Subscription Anomaly</strong> — <em>LedgerPay Global</em>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Identified 2 active enterprise seats on duplicate Salesforce instances ($3,600/mo waste).</div>
+              </div>
+            </div>
+            <span class="badge-pill badge-warning">Optimization Flag</span>
+          </div>
+
+          <div class="stream-item warn-item">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-triangle-exclamation" style="color: #d49511;"></i>
+              <div>
+                <strong>Quarterly Headcount Expansion Drift</strong> — <em>Vortex Robotics</em>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Engineering hiring pace exceeding baseline budget projection by +12.4% this quarter.</div>
+              </div>
+            </div>
+            <span class="badge-pill badge-warning">Advisory Notice Sent</span>
+          </div>
+
+          <div class="stream-item">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <i class="fa-solid fa-shield-check" style="color: #299b45;"></i>
+              <div>
+                <strong>Unallocated Option Pool Buffer</strong> — <em>HyperScale AI Inc.</em>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">14.2% pool remains healthy for planned Senior AI Research Scientist hires.</div>
+              </div>
+            </div>
+            <span class="badge-pill badge-healthy">Compliant</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================================
+           SECTION 6: REGULATORY COMPLIANCE & IMMUTABLE AUDIT TRAIL
+           ==================================================================== -->
+      <div class="dash-section-card" style="margin-bottom: 0;">
+        <div class="dash-sec-head">
+          <div class="dash-sec-title">
+            <i class="fa-solid fa-fingerprint"></i> Section 6: Cryptographic Audit Trail & Governance Log
+          </div>
+          <span class="dash-sec-tag">SOC-2 Type II Certified</span>
+        </div>
+
+        <div class="dash-table-wrap">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Timestamp (UTC)</th>
+                <th>Principal Identity</th>
+                <th>Action Recorded</th>
+                <th>Jurisdiction / Standard</th>
+                <th>Integrity Checksum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2026-09-15 10:14:22</td>
+                <td>System Auditor (Node-04)</td>
+                <td>Automated Q3 Cap Table Waterfall Verification</td>
+                <td>Delaware General Corp Law</td>
+                <td><code>0x7f2a...88c9</code> <span class="badge-pill badge-secure">VERIFIED</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-15 09:48:11</td>
+                <td>Accredited CPA Enclave</td>
+                <td>Monthly Accrual Close Signoff (HyperScale AI)</td>
+                <td>US GAAP / FASB ASC 606</td>
+                <td><code>0x9c1d...31b2</code> <span class="badge-pill badge-secure">VERIFIED</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-15 08:32:05</td>
+                <td>Treasury Yield Daemon</td>
+                <td>T-Bill Automated Sweep & Rebalance Protocol</td>
+                <td>FINRA / SEC Reg D</td>
+                <td><code>0x4b7e...99fa</code> <span class="badge-pill badge-secure">VERIFIED</span></td>
+              </tr>
+              <tr>
+                <td>2026-09-15 07:15:40</td>
+                <td>Tax Engine Daemon</td>
+                <td>IRS Form 6765 R&D Credit Calculation Lock</td>
+                <td>Internal Revenue Code § 41</td>
+                <td><code>0x11ab...65d4</code> <span class="badge-pill badge-secure">VERIFIED</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    // Populate profile chip from localStorage
+    (function () {
+      const name = localStorage.getItem('stackly_username') || 'Admin';
+      const role = localStorage.getItem('stackly_role') || 'founder';
+
+      // Name
+      const nameEl = document.getElementById('adminProfileName');
+      if (nameEl) nameEl.textContent = name;
+
+      // Initials (first letters of first two words)
+      const initials = name
+        .split(' ')
+        .slice(0, 2)
+        .map(w => w[0] ? w[0].toUpperCase() : '')
+        .join('');
+      const initialsEl = document.getElementById('adminAvatarInitials');
+      if (initialsEl) initialsEl.textContent = initials || 'A';
+
+      // Sign out: clear session
+      const signOut = document.getElementById('adminSignOutBtn');
+      if (signOut) {
+        signOut.addEventListener('click', () => {
+          localStorage.removeItem('stackly_username');
+          localStorage.removeItem('stackly_role');
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — The STACKLY Mission & Team</title>
+  <meta name="description" content="Discover how STACKLY was founded by serial tech entrepreneurs to democratize elite CFO intelligence and institutional runway clarity for high-growth startups.">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="images/logo.webp" alt="STACKLY Logo" style="height: 48px; width: auto; display: block;">
+      </a>
+
+      <!-- Pill Nav for Desktop -->
+      <nav class="nav-pill-wrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="service.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link active">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Header CTA & Contact Phone -->
+      <div class="header-cta-wrapper" style="display: flex; align-items: center; gap: 16px;">
+        <a href="tel:9876543210" class="header-phone-link" style="color: rgba(255,255,255,0.9); font-size: 0.86rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;">
+          <i class="fa-solid fa-phone" style="color: var(--lime); font-size: 0.8rem;"></i> +91 98765 43210
+        </a>
+        <a href="login.html" class="btn btn-lime header-cta-btn">
+          Login <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-dropdown" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="service.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link active">About Us</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <div style="padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 6px;">
+        <a href="tel:9876543210" style="color: var(--lime); font-weight: 700; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-phone"></i> +91 98765 43210
+        </a>
+        <span><i class="fa-solid fa-location-dot" style="color: var(--lime); margin-right: 6px;"></i> Salem, Tamil Nadu, India</span>
+      </div>
+      <a href="login.html" class="btn btn-lime" style="margin-top: 6px; width: 100%;">
+        Login <i class="fa-solid fa-arrow-trend-up"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECTION 1: ABOUT HERO (Scroll Animation)
+       ======================================================================== -->
+  <div class="page-hero-wrapper" id="about-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-content scroll-reveal">
+        <div class="section-tag-pill">
+          <i class="fa-solid fa-compass"></i> Our Purpose & Story
+        </div>
+        <h1 class="page-hero-title">We built the financial engine we desperately needed as founders.</h1>
+        <p class="page-hero-desc">
+          STACKLY was born out of sleepless nights staring at conflicting spreadsheet tabs 48 hours before an investor board meeting. We are engineering the modern standard of startup fiscal intelligence so founders never fly blind.
+        </p>
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <a href="#about-story" class="btn btn-lime">
+            Our Origin Story <i class="fa-solid fa-arrow-down"></i>
+          </a>
+          <a href="#about-team" class="btn btn-ghost-green">
+            Meet the Leadership <i class="fa-solid fa-users"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="page-hero-visual reveal-right">
+        <div class="page-hero-img-card">
+          <img src="images/img_1522071820081-0.webp" alt="STACKLY founders collaborating in design studio">
+          <div class="hero-floating-stat">
+            <div class="stat-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <div>
+              <div style="font-size: 1.25rem; font-weight: 800; color: var(--lime);">10,000+</div>
+              <div style="font-size: 0.82rem; color: rgba(255,255,255,0.85);">Founders Empowered Worldwide</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 2: ORIGIN STORY & MILESTONE TIMELINE (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="about-story">
+    <div class="container">
+      <div class="story-timeline-grid">
+        <div class="reveal-left">
+          <div class="section-tag-pill dark-tag">
+            <i class="fa-solid fa-timeline"></i> The Evolution
+          </div>
+          <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 20px; line-height: 1.2;">
+            From broken Excel models to a global financial platform.
+          </h2>
+          <p style="color: var(--text-muted); font-size: 1.02rem; line-height: 1.65; margin-bottom: 24px;">
+            In 2020, our founding team had just closed a $4M seed round for our prior venture. Within six months, we discovered our outsourced bookkeeping firm was 90 days behind, missing critical burn spikes that nearly halved our true runway.
+          </p>
+          <p style="color: var(--text-muted); font-size: 1.02rem; line-height: 1.65; margin-bottom: 30px;">
+            We realized that 82% of venture-backed failures aren't caused by bad product ideas—they occur because founders run out of cash before discovering product-market fit. We decided to solve this permanently.
+          </p>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; border-top: 1px solid var(--border-light); padding-top: 24px;">
+            <div>
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--green); font-family: 'Playfair Display', serif;">$3.8B+</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Monitored Capital</div>
+            </div>
+            <div>
+              <div style="font-size: 2.2rem; font-weight: 800; color: var(--green); font-family: 'Playfair Display', serif;">35+</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Countries Supported</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal-right">
+          <div class="timeline-items">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-node">
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--green); text-transform: uppercase;">Q1 2020 • Inception</span>
+              <h4 style="font-size: 1.2rem; color: var(--green-dark); margin: 4px 0 8px;">The Spreadsheets Revolt</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.55;">
+                Initial prototype built in Salem, Tamil Nadu, automating real-time Stripe and Brex reconciliation into a single unified cash burn feed.
+              </p>
+            </div>
+
+            <!-- Timeline Item 2 -->
+            <div class="timeline-node">
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--green); text-transform: uppercase;">Q3 2022 • Core Engine</span>
+              <h4 style="font-size: 1.2rem; color: var(--green-dark); margin: 4px 0 8px;">Dynamic Runway Forecaster</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.55;">
+                Shipped our proprietary predictive algorithm capable of simulating scenario waterfalls (headcount, pricing changes, zero-cash horizons).
+              </p>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-node">
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--green); text-transform: uppercase;">Q2 2024 • Global Scale</span>
+              <h4 style="font-size: 1.2rem; color: var(--green-dark); margin: 4px 0 8px;">Multi-Currency Treasury</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.55;">
+                Launched automated FX hedging and cross-border bank integrations across the US, UK, EU, Singapore, and India.
+              </p>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-node">
+              <span style="font-size: 0.8rem; font-weight: 800; color: var(--green); text-transform: uppercase;">2026 • Present</span>
+              <h4 style="font-size: 1.2rem; color: var(--green-dark); margin: 4px 0 8px;">Autonomous Fractional CFO Engine</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.55;">
+                Coupled generative financial intelligence with accredited CPA oversight, powering over 450 venture-backed tech startups worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 3: CORE OPERATING VALUES (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--cream);" id="about-values">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-heart-pulse"></i> Operating Principles
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          The Philosophy That Drives Our Work
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          We hold ourselves to the same uncompromising standards that top founders expect from their most critical engineering infrastructure.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <!-- Value 1 -->
+        <div class="value-card scroll-reveal">
+          <div class="value-icon"><i class="fa-solid fa-eye"></i></div>
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Radical Transparency</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            No hidden assumptions, no hand-waving estimates. Every metric, chart, and runway projection links directly to verified source bank ledgers.
+          </p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="value-card scroll-reveal" style="transition-delay: 0.1s;">
+          <div class="value-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Founder Obsession</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            We design every interface and report to save founders cognitive load so they can focus on shipping game-changing products.
+          </p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="value-card scroll-reveal" style="transition-delay: 0.2s;">
+          <div class="value-icon"><i class="fa-solid fa-calculator"></i></div>
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Mathematical Rigor</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            We treat financial ledgers with the exact zero-error tolerance of cryptographic databases. Every cent is reconciled and verified.
+          </p>
+        </div>
+
+        <!-- Value 4 -->
+        <div class="value-card scroll-reveal" style="transition-delay: 0.3s;">
+          <div class="value-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Speed Without Compromise</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+            Monthly financial closes shouldn't take 3 weeks. We close books in 48 hours without cutting corners on compliance or tax rigor.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 4: EXECUTIVE LEADERSHIP TEAM (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="about-team">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-users"></i> Leadership Team
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Built by Operators, CPAs, and Engineers
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Our leadership combines decades of experience across venture capital, fintech infrastructure, and enterprise accounting.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Team Member 1 -->
+        <div class="team-card scroll-reveal">
+          <img src="images/img_1534528741775-5.webp" alt="Arunachalam Murugan CEO portrait" class="team-photo">
+          <div class="team-info">
+            <h5>Navaneethan R.</h5>
+            <span>Founder & CEO</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+              Serial founder with 2 prior exits. Passionate about automating financial friction for modern startup creators.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 10px;">
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><span style="font-family: serif; font-weight: 700;">𝕏</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="images/img_1507003211169-0.webp" alt="Dr. Julian Ross CFO portrait" class="team-photo">
+          <div class="team-info">
+            <h5>Dr. Julian Ross, CFA</h5>
+            <span>Chief Financial Officer</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+              Former VP of Finance at Morgan Stanley and fractional CFO to 40+ Series A-C venture portfolios.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 10px;">
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><span style="font-family: serif; font-weight: 700;">𝕏</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="images/img_1573496359142-b.webp" alt="Priya Natarajan VP Product portrait" class="team-photo">
+          <div class="team-info">
+            <h5>Priya Natarajan</h5>
+            <span>VP of Product & AI</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+              Ex-Stripe and Brex product lead specializing in real-time transaction reconciliation algorithms.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 10px;">
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><span style="font-family: serif; font-weight: 700;">𝕏</span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-card scroll-reveal" style="transition-delay: 0.3s;">
+          <img src="images/img_1500648767791-0.webp" alt="David Sterling Head of Compliance portrait" class="team-photo">
+          <div class="team-info">
+            <h5>David Sterling, CPA</h5>
+            <span>Head of Regulatory Compliance</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+              Over 18 years in Big-4 tax controversy, R&D tax credit structuring, and SEC corporate filings.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 10px;">
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="404.html" style="color: var(--green); font-size: 1rem;"><span style="font-family: serif; font-weight: 700;">𝕏</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 5: CULTURE, HUBS & PHOTO GALLERY (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--cream);" id="about-culture">
+    <div class="container">
+      <div style="text-align: center; max-width: 740px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-earth-americas"></i> Global Culture
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Rooted in Salem, Operating Globally
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Our primary headquarters is proudly based in Salem, Tamil Nadu, supported by remote engineering and financial advisory pods across San Francisco, London, and Singapore.
+        </p>
+      </div>
+
+      <div class="culture-gallery-grid">
+        <div class="culture-img-wrap scroll-reveal">
+          <img src="images/img_1497366216548-3.webp" alt="Modern collaborative office floor">
+        </div>
+        <div class="culture-img-wrap scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="images/img_1522202176988-6.webp" alt="Team hackathon and product review">
+        </div>
+        <div class="culture-img-wrap scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="images/img_1517245386807-b.webp" alt="Financial modeling workshop conference">
+        </div>
+        <div class="culture-img-wrap scroll-reveal">
+          <img src="images/img_1497215728101-8.webp" alt="Focus workstation with modern greenery">
+        </div>
+        <div class="culture-img-wrap scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="images/img_1531482615713-2.webp" alt="Strategic executive presentation">
+        </div>
+        <div class="culture-img-wrap scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="images/img_1542744173-8e7e.webp" alt="Data analytics brainstorming session">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 6: STRATEGIC BACKERS & VC ADVISORY (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="about-investors">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-handshake"></i> Strategic Partners
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Backed by Leading Builders and Investors
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Our mission is supported by Tier-1 angels, prominent VC partners, and seasoned financial operators.
+        </p>
+      </div>
+
+      <div class="case-study-grid">
+        <!-- Investor 1 -->
+        <div class="case-card scroll-reveal">
+          <div>
+            <div style="color: var(--lime); font-size: 1.2rem; margin-bottom: 12px;">★★★★★</div>
+            <p style="color: var(--text-dark); font-size: 1.05rem; font-style: italic; line-height: 1.6; margin-bottom: 24px;">
+              "STACKLY provides the single source of financial truth that every early-stage investor dreams of seeing in quarterly board meetings."
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border-light); padding-top: 18px;">
+            <img src="images/img_1500648767791-0.webp" alt="Michael Thorne portrait" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover;">
+            <div>
+              <div style="font-weight: 700; color: var(--green-dark); font-size: 0.95rem;">Michael Thorne</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Partner, Horizon Seed Capital</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investor 2 -->
+        <div class="case-card scroll-reveal" style="transition-delay: 0.1s;">
+          <div>
+            <div style="color: var(--lime); font-size: 1.2rem; margin-bottom: 12px;">★★★★★</div>
+            <p style="color: var(--text-dark); font-size: 1.05rem; font-style: italic; line-height: 1.6; margin-bottom: 24px;">
+              "The founders understand what it actually takes to preserve runway in volatile market cycles. We mandate STACKLY across all our seed cohorts."
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border-light); padding-top: 18px;">
+            <img src="images/img_1580489944761-1.webp" alt="Amara Okafor portrait" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover;">
+            <div>
+              <div style="font-weight: 700; color: var(--green-dark); font-size: 0.95rem;">Amara Okafor</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">General Partner, BluePeak Ventures</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Investor 3 -->
+        <div class="case-card scroll-reveal" style="transition-delay: 0.2s;">
+          <div>
+            <div style="color: var(--lime); font-size: 1.2rem; margin-bottom: 12px;">★★★★★</div>
+            <p style="color: var(--text-dark); font-size: 1.05rem; font-style: italic; line-height: 1.6; margin-bottom: 24px;">
+              "Automating multi-entity books while giving founders instant scenario modeling is the holy grail of modern startup finance."
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 14px; border-top: 1px solid var(--border-light); padding-top: 18px;">
+            <img src="images/img_1472099645785-5.webp" alt="Sebastian Lee portrait" style="width: 46px; height: 46px; border-radius: 50%; object-fit: cover;">
+            <div>
+              <div style="font-weight: 700; color: var(--green-dark); font-size: 0.95rem;">Sebastian Lee</div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Angel Investor & Ex-Fintech Founder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 7: CAREERS & MISSION INVITATION (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--green-dark);" id="about-careers">
+    <div class="container">
+      <div class="cta-banner-card scroll-reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.12);">
+        <div class="cta-banner-content" style="text-align: center; max-width: 820px; margin: 0 auto;">
+          <div class="section-tag-pill" style="margin-bottom: 20px;">
+            <i class="fa-solid fa-briefcase"></i> Join Our Team
+          </div>
+          <h2 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); color: var(--white); margin-bottom: 18px; line-height: 1.15;">
+            Help Us Redefine the Future of Startup Finance
+          </h2>
+          <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6; margin-bottom: 34px;">
+            We are actively hiring Senior Financial Analysts, Machine Learning Engineers, Full-Stack Product Developers, and Enterprise CPAs across Salem and worldwide remote hubs.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 32px;">
+            <a href="404.html" class="btn btn-lime">
+              View Open Roles (8 Positions) <i class="fa-solid fa-arrow-trend-up"></i>
+            </a>
+            <a href="404.html" class="btn btn-ghost-green">
+              Email Our Talent Team <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+
+          <div style="display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; color: rgba(255,255,255,0.7); font-size: 0.88rem;">
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> Competitive equity packages</span>
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> Work-from-anywhere flexibility</span>
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> Comprehensive wellness stipend</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer id="footer">
+    <div class="container">
+      <!-- STACKLY Company Headquarters & Contact Info Bar -->
+      <div style="background: var(--cream); border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 30px 36px; margin-bottom: 50px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="background: var(--green); border-radius: 14px; padding: 6px 10px; display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.webp" alt="STACKLY Logo" style="height: 40px; width: auto; display: block; filter: brightness(0) invert(1);">
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; color: var(--green-dark); margin-bottom: 2px;">STACKLY Technologies Inc.</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 7px;">
+              <i class="fa-solid fa-location-dot" style="color: var(--green);"></i> Salem, Tamil Nadu, India
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <a href="tel:9876543210" style="background: var(--white); border: 1.5px solid var(--border-light); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm); transition: var(--transition);">
+            <i class="fa-solid fa-phone" style="color: #299b45;"></i> +91 98765 43210
+          </a>
+          <a href="mailto:contact@stackly.com" style="background: var(--green); color: var(--white); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; transition: var(--transition);">
+            <i class="fa-solid fa-envelope" style="color: var(--lime);"></i> contact@stackly.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-grid">
+        <div class="footer-col">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Discover</h5>
+          <ul>
+            <li><a href="404.html">Terms & Privacy</a></li>
+            <li><a href="404.html">Security</a></li>
+            <li><a href="404.html">Changelog</a></li>
+            <li><a href="404.html">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="404.html">About STACKLY</a></li>
+            <li><a href="404.html">Salem Headquarters</a></li>
+            <li><a href="404.html">Careers</a></li>
+            <li><a href="404.html">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Insights</h5>
+          <ul>
+            <li><a href="404.html">Startup Blog</a></li>
+            <li><a href="404.html">Runway Calculator</a></li>
+            <li><a href="404.html">Cap Table Guide</a></li>
+            <li><a href="404.html">License</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Help & Support</h5>
+          <ul>
+            <li><a href="404.html">Ph: +91 98765 43210</a></li>
+            <li><a href="404.html">Salem, Tamil Nadu, India</a></li>
+            <li><a href="404.html">Documentation</a></li>
+            <li><a href="404.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <!-- Social Icons -->
+        <div class="footer-social-links">
+          <a href="404.html" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Twitter / X"><span style="font-size: 1rem; font-weight: 700; font-family: serif; line-height: 1;">𝕏</span></a>
+        </div>
+
+        <!-- App Store Buttons -->
+        <div class="footer-app-badges">
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-android"></i> Download on Android
+          </a>
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-apple"></i> Download on iOS
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <span>© STACKLY 2024. All rights reserved. Salem, Tamil Nadu, India. Ph: <a href="tel:9876543210" style="color: var(--green); font-weight: 700;">+91 98765 43210</a></span>
+          <span>Financial Clarity for Startup Founders</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       JAVASCRIPT: INTERSECTION OBSERVER SCROLL ANIMATIONS & MOBILE MENU
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sticky header
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener('click', () => {
+          mobileNav.classList.toggle('open');
+          const isOpen = mobileNav.classList.contains('open');
+          mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll('.mobile-dropdown .nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      // Intersection Observer for Scroll Animations
+      const animElements = document.querySelectorAll('.scroll-reveal, .reveal-left, .reveal-right, .reveal-scale, .fade-in-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      animElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>

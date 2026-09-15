@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — STACKLY Financial Advisory & Headquarters</title>
+  <meta name="description" content="Connect with STACKLY's startup financial specialists. Book a fractional CFO consultation, request a runway audit, or visit our Salem, Tamil Nadu headquarters.">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="images/logo.webp" alt="STACKLY Logo" style="height: 48px; width: auto; display: block;">
+      </a>
+
+      <!-- Pill Nav for Desktop -->
+      <nav class="nav-pill-wrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="service.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link active">Contact Us</a>
+      </nav>
+
+      <!-- Header CTA & Contact Phone -->
+      <div class="header-cta-wrapper" style="display: flex; align-items: center; gap: 16px;">
+        <a href="tel:9876543210" class="header-phone-link" style="color: rgba(255,255,255,0.9); font-size: 0.86rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;">
+          <i class="fa-solid fa-phone" style="color: var(--lime); font-size: 0.8rem;"></i> +91 98765 43210
+        </a>
+        <a href="login.html" class="btn btn-lime header-cta-btn">
+          Login <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-dropdown" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="service.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link active">Contact Us</a>
+      <div style="padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 6px;">
+        <a href="tel:9876543210" style="color: var(--lime); font-weight: 700; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-phone"></i> +91 98765 43210
+        </a>
+        <span><i class="fa-solid fa-location-dot" style="color: var(--lime); margin-right: 6px;"></i> Salem, Tamil Nadu, India</span>
+      </div>
+      <a href="login.html" class="btn btn-lime" style="margin-top: 6px; width: 100%;">
+        Login <i class="fa-solid fa-arrow-trend-up"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       PAGE HERO / INTRO
+       ======================================================================== -->
+  <div class="page-hero-wrapper" id="contact-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-content scroll-reveal">
+        <div class="section-tag-pill">
+          <i class="fa-solid fa-headset"></i> We're Here For Founders
+        </div>
+        <h1 class="page-hero-title">Let's build your financial runway engine together.</h1>
+        <p class="page-hero-desc">
+          Whether you need a full historical accounting audit, runway modeling for an upcoming Series A round, or custom corporate treasury solutions, our senior CPAs are ready to advise you.
+        </p>
+        <div style="display: flex; gap: 18px; flex-wrap: wrap; color: rgba(255,255,255,0.8); font-size: 0.92rem;">
+          <span><i class="fa-solid fa-bolt" style="color: var(--lime); margin-right: 6px;"></i> Average response: Under 2 hours</span>
+          <span><i class="fa-solid fa-shield-halved" style="color: var(--lime); margin-right: 6px;"></i> Strict NDA protection</span>
+        </div>
+      </div>
+
+      <div class="page-hero-visual reveal-right">
+        <div class="page-hero-img-card">
+          <img src="images/img_1486406146926-c.webp" alt="Modern corporate headquarters tower">
+          <div class="hero-floating-stat">
+            <div class="stat-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <div style="font-size: 1.15rem; font-weight: 800; color: var(--lime);">Salem HQ</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85);">Tamil Nadu, India • Global Operations</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MAIN CONTACT HUB: FORM & DIRECT DETAILS
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="contact-hub">
+    <div class="container">
+      <div class="contact-hub-grid">
+        <!-- Left: Interactive Contact Form -->
+        <div class="contact-form-card scroll-reveal">
+          <div style="margin-bottom: 30px;">
+            <span class="section-tag-pill dark-tag" style="margin-bottom: 10px;">
+              <i class="fa-solid fa-paper-plane"></i> Direct Inquiry
+            </span>
+            <h3 style="font-size: 1.9rem; color: var(--green-dark); margin-bottom: 8px;">Schedule a Consultation</h3>
+            <p style="color: var(--text-muted); font-size: 0.94rem;">
+              Fill out the details below and an accredited CFO will review your company profile and respond promptly.
+            </p>
+          </div>
+
+          <form id="mainContactForm" action="404.html" method="get" onsubmit="window.location.href='404.html'; return false;">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="contactFullName">Your Full Name *</label>
+                <input type="text" id="contactFullName" class="form-input" placeholder="e.g. Elena Vance" required>
+              </div>
+              <div class="form-group">
+                <label for="contactWorkEmail">Work Email Address *</label>
+                <input type="email" id="contactWorkEmail" class="form-input" placeholder="elena@company.com" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="contactPhone">Phone Number *</label>
+                <input type="tel" id="contactPhone" class="form-input" placeholder="+91 98765 43210" required>
+              </div>
+              <div class="form-group">
+                <label for="contactCompany">Company / Startup Name *</label>
+                <input type="text" id="contactCompany" class="form-input" placeholder="e.g. Acme Technologies" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="contactStage">Current Funding Stage</label>
+                <select id="contactStage" class="form-select">
+                  <option value="pre-seed">Pre-Seed (&lt; $500K Raised)</option>
+                  <option value="seed">Seed ($500K - $3M Raised)</option>
+                  <option value="series-a">Series A ($3M - $15M Raised)</option>
+                  <option value="series-b">Series B+ ($15M+ Raised)</option>
+                  <option value="bootstrapped">Bootstrapped / Profitable</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactBurn">Monthly Net Burn Rate</label>
+                <select id="contactBurn" class="form-select">
+                  <option value="low">Under $25,000 / month</option>
+                  <option value="medium">$25,000 - $75,000 / month</option>
+                  <option value="high">$75,000 - $200,000 / month</option>
+                  <option value="scale">$200,000+ / month</option>
+                  <option value="positive">Cash-Flow Positive</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactInquiryType">Primary Service Interest</label>
+              <select id="contactInquiryType" class="form-select">
+                <option value="audit">Complimentary Runway & Financial Health Audit</option>
+                <option value="cfo">Fractional CFO & Strategic Advisory</option>
+                <option value="bookkeeping">AI Continuous Bookkeeping & Reconciliation</option>
+                <option value="captable">Cap Table & SAFE Dilution Modeling</option>
+                <option value="tax">R&D Tax Credit Filing & Compliance</option>
+                <option value="enterprise">Enterprise Custom Deployment</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">How can we help your team? *</label>
+              <textarea id="contactMessage" class="form-textarea" rows="4" placeholder="Tell us about your current finance stack, key challenges, or upcoming fundraising targets..." required></textarea>
+            </div>
+
+            <div style="margin-bottom: 24px;">
+              <label style="display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">
+                <input type="checkbox" required checked style="accent-color: var(--green);">
+                <span>I agree to STACKLY's Privacy Policy and request an executive NDA prior to financial disclosure.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-lime" style="width: 100%; padding: 16px; font-size: 1.05rem;">
+              Submit Inquiry to CFO Team <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Direct Contact & Office Details -->
+        <div class="contact-info-panel reveal-right">
+          <!-- Primary Direct Info Card -->
+          <div class="contact-info-card">
+            <h4 style="font-size: 1.35rem; margin-bottom: 20px; color: var(--lime);">Direct Communication</h4>
+
+            <div class="contact-info-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.7); text-transform: uppercase;">Direct Line</span>
+                <a href="tel:9876543210" style="display: block; font-size: 1.15rem; font-weight: 700; color: var(--white); margin-top: 2px;">
+                  +91 98765 43210
+                </a>
+                <span style="font-size: 0.78rem; color: var(--lime);">Mon - Fri, 9:00 AM - 7:00 PM IST</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.7); text-transform: uppercase;">Official Inquiries</span>
+                <a href="mailto:contact@stackly.com" style="display: block; font-size: 1.05rem; font-weight: 600; color: var(--white); margin-top: 2px;">
+                  contact@stackly.com
+                </a>
+                <span style="font-size: 0.78rem; color: rgba(255,255,255,0.75);">Encrypted PGP Available</span>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span style="font-size: 0.8rem; color: rgba(255,255,255,0.7); text-transform: uppercase;">Global Headquarters</span>
+                <p style="font-size: 0.95rem; color: var(--white); line-height: 1.5; margin-top: 2px;">
+                  STACKLY Technologies Inc.<br>
+                  Salem High-Tech Park, Salem,<br>
+                  Tamil Nadu 636001, India
+                </p>
+              </div>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 18px; margin-top: 10px; display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.84rem; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 8px;">
+                <span style="width: 8px; height: 8px; background: var(--lime); border-radius: 50%; display: inline-block;"></span>
+                Support Team Online
+              </span>
+              <a href="tel:9876543210" class="btn btn-lime" style="padding: 8px 18px; font-size: 0.82rem;">
+                Call Now <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Discovery Call Card -->
+          <div style="background: var(--cream); border: 1.5px solid var(--border-light); border-radius: var(--radius-xl); padding: 32px;">
+            <div style="width: 44px; height: 44px; background: var(--green-dark); color: var(--lime); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.1rem; margin-bottom: 16px;">
+              <i class="fa-regular fa-calendar-check"></i>
+            </div>
+            <h4 style="font-size: 1.18rem; color: var(--green-dark); margin-bottom: 8px;">Prefer a Quick 15-Minute Intro?</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 18px;">
+              Skip the email ping-pong. Select an open slot directly on our Senior Financial Partner calendar.
+            </p>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">
+              Open Live Booking Calendar <i class="fa-solid fa-arrow-trend-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       GLOBAL OFFICE LOCATIONS
+       ======================================================================== -->
+  <div style="padding: 90px 0; background-color: var(--cream);" id="contact-locations">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-building"></i> Worldwide Presence
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Our Regional Offices & Hubs
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Drop by our offices for an in-person financial strategy session or investor readiness workshop.
+        </p>
+      </div>
+
+      <div class="services-card-grid">
+        <!-- Location 1 -->
+        <div class="service-card scroll-reveal">
+          <img src="images/img_1497366216548-3.webp" alt="Salem Global Headquarters" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Global Headquarters</span>
+            <h3 class="service-title">Salem, Tamil Nadu</h3>
+            <p class="service-text">
+              Salem Tech Park, Meyyanur Bypass Rd, Salem, Tamil Nadu 636004, India. Core engineering and AI research center.
+            </p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--green); margin-bottom: 16px;">
+              <i class="fa-solid fa-phone" style="margin-right: 6px;"></i> +91 98765 43210
+            </div>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Get Directions <i class="fa-solid fa-diamond-turn-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="service-card scroll-reveal" style="transition-delay: 0.1s;">
+          <img src="images/img_1486406146926-c.webp" alt="Bengaluru Financial Hub" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">Regional Hub</span>
+            <h3 class="service-title">Bengaluru, Karnataka</h3>
+            <p class="service-text">
+              Indiranagar 100ft Road, Bengaluru, Karnataka 560038. Venture relations, investor matchmaking, and client success.
+            </p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--green); margin-bottom: 16px;">
+              <i class="fa-solid fa-phone" style="margin-right: 6px;"></i> +91 98765 43211
+            </div>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Get Directions <i class="fa-solid fa-diamond-turn-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Location 3 -->
+        <div class="service-card scroll-reveal" style="transition-delay: 0.2s;">
+          <img src="images/img_1506146332389-1.webp" alt="San Francisco Partner Desk" class="service-card-img">
+          <div class="service-card-body">
+            <span class="service-badge">International Desk</span>
+            <h3 class="service-title">San Francisco, California</h3>
+            <p class="service-text">
+              Montgomery Street, Financial District, San Francisco, CA 94104. US GAAP advisory and cross-border treasury management.
+            </p>
+            <div style="font-size: 0.88rem; font-weight: 700; color: var(--green); margin-bottom: 16px;">
+              <i class="fa-solid fa-phone" style="margin-right: 6px;"></i> +1 (415) 890-4321
+            </div>
+            <a href="404.html" class="btn btn-dark" style="width: 100%;">Get Directions <i class="fa-solid fa-diamond-turn-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FREQUENTLY ASKED QUESTIONS
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="contact-faq">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-circle-question"></i> Instant Clarifications
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Common Inquiries Before Partnering
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Key questions regarding data confidentiality, initial timelines, and our service scope.
+        </p>
+      </div>
+
+      <div class="faq-accordion-wrap" style="max-width: 820px; margin: 0 auto;">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>Do you sign standard bilateral NDAs prior to accessing financial data?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>Yes, absolutely. We execute mutual Non-Disclosure Agreements with every prospective founder before any bank feeds, cap tables, or tax records are shared. Your fiscal data remains 100% confidential under bank-grade SOC-2 security protocols.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How fast can STACKLY onboard our company and clean up past ledgers?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>Our typical onboarding takes between 48 to 96 hours. Once read-only banking and Stripe credentials are connected via secure API tokens, our AI algorithms automatically categorize up to 18 months of historical transactions with CPA verification.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>Can we work with STACKLY if we already have an external tax CPA?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>Yes. Many of our clients retain their existing annual corporate tax CPA while utilizing STACKLY for real-time monthly closing, runway scenario simulations, R&D tax credit calculations, and board deck preparation.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>What happens during the complimentary Financial & Runway Health Audit?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>Our senior finance partners review your trailing 6-month burn, calculate your exact zero-cash date across 3 market scenarios, identify duplicate recurring subscriptions, and deliver an executive 5-page PDF summary with zero obligation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer id="footer">
+    <div class="container">
+      <!-- STACKLY Company Headquarters & Contact Info Bar -->
+      <div style="background: var(--cream); border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 30px 36px; margin-bottom: 50px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="background: var(--green); border-radius: 14px; padding: 6px 10px; display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.webp" alt="STACKLY Logo" style="height: 40px; width: auto; display: block; filter: brightness(0) invert(1);">
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; color: var(--green-dark); margin-bottom: 2px;">STACKLY Technologies Inc.</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 7px;">
+              <i class="fa-solid fa-location-dot" style="color: var(--green);"></i> Salem, Tamil Nadu, India
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <a href="404.html" style="background: var(--white); border: 1.5px solid var(--border-light); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm); transition: var(--transition);">
+            <i class="fa-solid fa-phone" style="color: #299b45;"></i> +91 98765 43210
+          </a>
+          <a href="mailto:contact@stackly.com" style="background: var(--green); color: var(--white); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; transition: var(--transition);">
+            <i class="fa-solid fa-envelope" style="color: var(--lime);"></i> contact@stackly.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-grid">
+        <div class="footer-col">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Discover</h5>
+          <ul>
+            <li><a href="404.html">Terms & Privacy</a></li>
+            <li><a href="404.html">Security</a></li>
+            <li><a href="404.html">Changelog</a></li>
+            <li><a href="404.html">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="404.html">About STACKLY</a></li>
+            <li><a href="404.html">Salem Headquarters</a></li>
+            <li><a href="404.html">Careers</a></li>
+            <li><a href="404.html">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Insights</h5>
+          <ul>
+            <li><a href="404.html">Startup Blog</a></li>
+            <li><a href="404.html">Runway Calculator</a></li>
+            <li><a href="404.html">Cap Table Guide</a></li>
+            <li><a href="404.html">License</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Help & Support</h5>
+          <ul>
+            <li><a href="404.html">Ph: +91 98765 43210</a></li>
+            <li><a href="404.html">Salem, Tamil Nadu, India</a></li>
+            <li><a href="404.html">Documentation</a></li>
+            <li><a href="404.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <!-- Social Icons -->
+        <div class="footer-social-links">
+          <a href="404.html" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Twitter / X"><span style="font-size: 1rem; font-weight: 700; font-family: serif; line-height: 1;">𝕏</span></a>
+        </div>
+
+        <!-- App Store Buttons -->
+        <div class="footer-app-badges">
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-android"></i> Download on Android
+          </a>
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-apple"></i> Download on iOS
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <span>© STACKLY 2024. All rights reserved. Salem, Tamil Nadu, India. Ph: <a href="tel:9876543210" style="color: var(--green); font-weight: 700;">+91 98765 43210</a></span>
+          <span>Financial Clarity for Startup Founders</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       JAVASCRIPT: INTERSECTION OBSERVER SCROLL ANIMATIONS & FAQ ACCORDION
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sticky header
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener('click', () => {
+          mobileNav.classList.toggle('open');
+          const isOpen = mobileNav.classList.contains('open');
+          mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll('.mobile-dropdown .nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      // Intersection Observer for Scroll Animations
+      const animElements = document.querySelectorAll('.scroll-reveal, .reveal-left, .reveal-right, .reveal-scale, .fade-in-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      animElements.forEach(el => observer.observe(el));
+
+      // FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            faqItems.forEach(i => {
+              i.classList.remove('active');
+              const b = i.querySelector('.faq-question-btn');
+              if (b) b.setAttribute('aria-expanded', 'false');
+            });
+
+            if (!isActive) {
+              item.classList.add('active');
+              btn.setAttribute('aria-expanded', 'true');
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

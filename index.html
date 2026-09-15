@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STACKLY — Fundraising Clarity for Founders</title>
+  <meta name="description" content="Manage your cash flow, track expenses, and prepare investor-ready reports in minutes with STACKLY. Scale smarter and make data-driven financial decisions.">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="images/logo.webp" alt="STACKLY Logo" style="height: 48px; width: auto; display: block;">
+      </a>
+
+      <!-- Pill Nav for Desktop -->
+      <nav class="nav-pill-wrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="service.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Header CTA & Contact Phone -->
+      <div class="header-cta-wrapper" style="display: flex; align-items: center; gap: 16px;">
+        <a href="404.html" class="header-phone-link" style="color: rgba(255,255,255,0.9); font-size: 0.86rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;">
+          <i class="fa-solid fa-phone" style="color: var(--lime); font-size: 0.8rem;"></i> +91 98765 43210
+        </a>
+        <a href="login.html" class="btn btn-lime header-cta-btn">
+          Login <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-dropdown" id="mobileNav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="service.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <div style="padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 6px;">
+        <a href="404.html" style="color: var(--lime); font-weight: 700; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-phone"></i> +91 98765 43210
+        </a>
+        <span><i class="fa-solid fa-location-dot" style="color: var(--lime); margin-right: 6px;"></i> Salem, Tamil Nadu, India</span>
+      </div>
+      <a href="login.html" class="btn btn-lime" style="margin-top: 6px; width: 100%;">
+        Login<i class="fa-solid fa-arrow-trend-up"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section id="hero">
+    <div class="container hero-grid">
+      <!-- Left Content -->
+      <div class="hero-content fade-in-up">
+        <h1>Financial clarity<br>for founders<br>scale smarter</h1>
+        <p>
+          Manage your cash flow, track expenses, and prepare investor-ready reports in minutes. Make data-driven decisions.
+        </p>
+        <div class="hero-actions">
+          <a href="404.html" class="btn btn-white">
+            Try It for Free <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+          </a>
+          <a href="404.html" class="btn btn-ghost-green">
+            Explore Features
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Visual with Floating Stat Card -->
+      <div class="hero-visual fade-in-up">
+        <div class="hero-image-card">
+          <img src="images/img_1518495973542-4.webp" alt="Abstract sculpture and organic wood photography">
+          
+          <!-- Floating Glass Stat Card -->
+          <div class="floating-stat-card">
+            <div class="f-card-header">
+              <span class="f-card-title">Q4 Budget</span>
+              <span class="f-card-badge">20% Spent</span>
+            </div>
+            <div class="f-card-row">
+              <span>Spent Amount</span>
+              <strong>1,200.36 USD</strong>
+            </div>
+            <div class="f-card-row">
+              <span>Budget Total</span>
+              <strong>6,000.00 USD</strong>
+            </div>
+            
+            <div class="f-progress-track">
+              <div class="f-progress-bar"></div>
+            </div>
+
+            <div class="f-card-footer">
+              <div class="avatar-stack">
+                <img src="images/img_1534528741775-5.webp" alt="Reviewer avatar 1">
+                <img src="images/img_1507003211169-0.webp" alt="Reviewer avatar 2">
+                <img src="images/img_1500648767791-0.webp" alt="Reviewer avatar 3">
+              </div>
+              <span class="avatar-stack-text">+50 Reviewers</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TRUSTED BY LOGO BAR
+       ======================================================================== -->
+  <div id="trust-bar">
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <!-- Original set -->
+        <div class="partner-logo"><i class="fa-solid fa-shapes"></i> innovio</div>
+        <div class="partner-logo"><i class="fa-solid fa-diamond"></i> techtide</div>
+        <div class="partner-logo"><i class="fa-solid fa-water"></i> Pulse</div>
+        <div class="partner-logo"><i class="fa-solid fa-cube"></i> Craftgram</div>
+        <div class="partner-logo"><i class="fa-solid fa-circle-nodes"></i> Lum Labs</div>
+        <div class="partner-logo"><i class="fa-solid fa-bolt"></i> Nexora</div>
+        <div class="partner-logo"><i class="fa-solid fa-layer-group"></i> Stackvault</div>
+        <div class="partner-logo"><i class="fa-solid fa-rocket"></i> LaunchOS</div>
+        <!-- Duplicate for seamless loop -->
+        <div class="partner-logo"><i class="fa-solid fa-shapes"></i> innovio</div>
+        <div class="partner-logo"><i class="fa-solid fa-diamond"></i> techtide</div>
+        <div class="partner-logo"><i class="fa-solid fa-water"></i> Pulse</div>
+        <div class="partner-logo"><i class="fa-solid fa-cube"></i> Craftgram</div>
+        <div class="partner-logo"><i class="fa-solid fa-circle-nodes"></i> Lum Labs</div>
+        <div class="partner-logo"><i class="fa-solid fa-bolt"></i> Nexora</div>
+        <div class="partner-logo"><i class="fa-solid fa-layer-group"></i> Stackvault</div>
+        <div class="partner-logo"><i class="fa-solid fa-rocket"></i> LaunchOS</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       TESTIMONIALS SECTION (CLICK ARROWS TO SCROLL)
+       ======================================================================== -->
+  <section id="testimonials">
+    <div class="container">
+      <div class="testimonials-top-bar">
+        <h2>Take control of your startup's finances</h2>
+        <div class="carousel-nav-buttons">
+          <button class="carousel-nav-btn" id="prevTestimonial" aria-label="Previous testimonials">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button class="carousel-nav-btn" id="nextTestimonial" aria-label="Next testimonials">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Scrollable Track Container -->
+      <div class="testimonials-slider-wrap" id="testimonialsSlider">
+        <div class="testimonials-track">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <img src="images/img_1534528741775-5.webp" alt="Jhon Bisbik portrait" class="testimonial-avatar">
+            <div class="testimonial-content">
+              <h4>Exceptional Financial Expertise!</h4>
+              <p class="testimonial-quote">"The tools are intuitive, and the support team is incredible. It's perfect for professionals and startup founders alike."</p>
+              <div class="testimonial-author">Jhon Bisbik, <span class="testimonial-role">Project Manager</span></div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <img src="images/img_1507003211169-0.webp" alt="John Mars portrait" class="testimonial-avatar">
+            <div class="testimonial-content">
+              <h4>Outstanding Support!</h4>
+              <p class="testimonial-quote">"I was skeptical at first, but it turned out to be exactly what we needed. The reporting is ultra fast, reliable and crystal clear."</p>
+              <div class="testimonial-author">John Mars, <span class="testimonial-role">Startup Founder</span></div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <img src="images/img_1573496359142-b.webp" alt="Elena Vance portrait" class="testimonial-avatar">
+            <div class="testimonial-content">
+              <h4>Cut Closing Time by 75%</h4>
+              <p class="testimonial-quote">"Our monthly accounting review went from 5 days down to half an afternoon. Investors love the automated monthly dispatch."</p>
+              <div class="testimonial-author">Elena Vance, <span class="testimonial-role">CFO at CloudSync</span></div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="testimonial-card">
+            <img src="images/img_1500648767791-0.webp" alt="David Chen portrait" class="testimonial-avatar">
+            <div class="testimonial-content">
+              <h4>Flawless Runway Forecasts</h4>
+              <p class="testimonial-quote">"Having real-time bank feeds synced straight into scenario projections saved us months of spreadsheets stress during our Series A."</p>
+              <div class="testimonial-author">David Chen, <span class="testimonial-role">Co-Founder at Finix</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       LIME BANNER BENEFIT SECTION
+       ======================================================================== -->
+  <section id="lime-banner">
+    <div class="container">
+      <div class="lime-banner-container fade-in-up">
+        <div class="lime-banner-header">
+          <div class="lime-header-left">
+            <div class="section-kicker">More Growth, Less Stress</div>
+            <h2>See how we're transforming startup</h2>
+          </div>
+          <a href="404.html" class="btn btn-dark">
+            Try It for Free
+          </a>
+        </div>
+
+        <div class="lime-cards-grid">
+          <!-- Card 1 -->
+          <div class="lime-benefit-card">
+            <div class="lime-card-icon">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <h3>Improve cash flow visibility</h3>
+            <p>Get notified of cash flow shortages, overspending, and potential financial risks before they happen.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="lime-benefit-card">
+            <div class="lime-card-icon">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3>Save time with automation</h3>
+            <p>Predict revenue trends and expenses with machine learning-driven insights to make data-backed decisions.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="lime-benefit-card">
+            <div class="lime-card-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3>Optimize cost management</h3>
+            <p>Ditch the spreadsheets and let AI handle your finances. Track cash flow, monitor expenses, and generate reports.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FEATURE SHOWCASE ROWS (Alternating Layouts)
+       ======================================================================== -->
+  <section id="feature-rows">
+    <div class="container">
+      <!-- Row 1: Plant image on Left, Text on Right -->
+      <div class="showcase-row fade-in-up">
+        <div class="showcase-image-col">
+          <div class="showcase-img-box">
+            <img src="images/img_1518531933037-9.webp" alt="Lush green botanical leaves">
+            
+            <!-- Floating Overlay Card: Most Frequent Expenses -->
+            <div class="floating-overlay-card">
+              <div class="foc-title">Most Frequent Expenses</div>
+              <div class="foc-item">
+                <div class="foc-brand">
+                  <div class="foc-badge-icon"><i class="fa-solid fa-briefcase"></i></div>
+                  <span>Big Bazaar</span>
+                </div>
+                <div class="foc-values">
+                  <span>Lead Amount: <strong>12x</strong></span>
+                  <span>Avg: <strong>$118.00</strong></span>
+                  <span>Total: <strong>$1,118.00</strong></span>
+                </div>
+              </div>
+              <div class="foc-item">
+                <div class="foc-brand">
+                  <div class="foc-badge-icon"><i class="fa-solid fa-store"></i></div>
+                  <span>Walmart</span>
+                </div>
+                <div class="foc-values">
+                  <span>Lead Amount: <strong>12x</strong></span>
+                  <span>Avg: <strong>$118.00</strong></span>
+                  <span>Total: <strong>$1,118.00</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-text-col">
+          <div class="feature-icon-badge">
+            <i class="fa-solid fa-file-invoice"></i>
+          </div>
+          <h2>One-click investor-ready reports</h2>
+          <p>Generate professional financial reports in seconds to impress investors and key stakeholders with verifiable precision.</p>
+        </div>
+      </div>
+
+      <!-- Row 2: Text on Left, Grass with Floating Pills on Right (Reversed) -->
+      <div class="showcase-row reversed fade-in-up">
+        <div class="showcase-image-col">
+          <div class="showcase-img-box">
+            <img src="images/img_1500382017468-9.webp" alt="Rolling green grass hill landscape">
+            
+            <!-- Floating Pills -->
+            <div class="floating-pills-container">
+              <div class="floating-amount-pill">
+                <span>$300.86</span>
+                <span class="f-tag-vat">VAT 63</span>
+                <span class="f-tag-currency">$USD</span>
+              </div>
+              <div class="floating-amount-pill">
+                <span>$300.86</span>
+                <span class="f-tag-vat">VAT 63</span>
+                <span class="f-tag-currency">$USD</span>
+              </div>
+              <div class="floating-amount-pill">
+                <span>$300.86</span>
+                <span class="f-tag-vat">VAT 63</span>
+                <span class="f-tag-currency">$USD</span>
+              </div>
+              <div class="floating-amount-pill">
+                <span>$300.86</span>
+                <span class="f-tag-vat">VAT 63</span>
+                <span class="f-tag-currency">$USD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-text-col">
+          <div class="feature-icon-badge">
+            <i class="fa-solid fa-paper-plane"></i>
+          </div>
+          <h2>Revenue and profitability analytics</h2>
+          <p>Get notified of cash flow shortages, overspending, and potential financial risks before they impact your operating runway.</p>
+        </div>
+      </div>
+
+      <!-- Row 3: Mountain image on Left, Text on Right -->
+      <div class="showcase-row fade-in-up">
+        <div class="showcase-image-col">
+          <div class="showcase-img-box">
+            <img src="images/img_1464822759023-f.webp" alt="Scenic alpine mountain ridge">
+            
+            <!-- Mountain Overlay Chart -->
+            <div class="mountain-chart-overlay">
+              <div class="mco-lead-label">Lead Amount</div>
+              <div class="mco-amount">$45,300.86</div>
+              <svg class="mco-chart-svg" viewBox="0 0 260 60" fill="none">
+                <path d="M0,50 Q40,35 80,45 T160,20 T220,28 T260,10 L260,60 L0,60 Z" fill="rgba(212, 232, 76, 0.25)"/>
+                <path d="M0,50 Q40,35 80,45 T160,20 T220,28 T260,10" stroke="#0f3e30" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="showcase-text-col">
+          <div class="feature-icon-badge">
+            <i class="fa-solid fa-chart-pie"></i>
+          </div>
+          <h2>Custom financial dashboards</h2>
+          <p>Design your own dashboard to track the metrics that matter most to your business model with drag-and-drop ease.</p>
+        </div>
+      </div>
+  <!-- ========================================================================
+       NEW SECTION 1: RUNWAY & CASH FLOW SIMULATOR
+       ======================================================================== -->
+  <section id="runway-calculator">
+    <div class="container">
+      <div class="calc-header fade-in-up">
+        <div class="section-kicker">Interactive Founder Tool</div>
+        <h2>Simulate Your Runway & Cash Flow in Real-Time</h2>
+        <p>Adjust your monthly revenue, operational burn, and bank reserves to project your exact operating runway without complex spreadsheets.</p>
+      </div>
+
+      <div class="calc-grid fade-in-up">
+        <!-- Controls Card -->
+        <div class="calc-controls-card">
+          <!-- Slider 1: Cash Balance -->
+          <div class="slider-group">
+            <div class="slider-top-label">
+              <span>Current Cash Reserves:</span>
+              <strong id="valCash">$450,000</strong>
+            </div>
+            <input type="range" class="styled-range" id="inputCash" min="20000" max="2000000" step="10000" value="450000">
+            <div class="slider-bounds">
+              <span>$20k</span>
+              <span>$2.0M</span>
+            </div>
+          </div>
+
+          <!-- Slider 2: Monthly Burn -->
+          <div class="slider-group">
+            <div class="slider-top-label">
+              <span>Monthly Operating Expenses (Burn):</span>
+              <strong id="valBurn">$45,000</strong>
+            </div>
+            <input type="range" class="styled-range" id="inputBurn" min="5000" max="250000" step="2500" value="45000">
+            <div class="slider-bounds">
+              <span>$5k/mo</span>
+              <span>$250k/mo</span>
+            </div>
+          </div>
+
+          <!-- Slider 3: Monthly Revenue -->
+          <div class="slider-group">
+            <div class="slider-top-label">
+              <span>Monthly Recurring Revenue (MRR):</span>
+              <strong id="valRev">$15,000</strong>
+            </div>
+            <input type="range" class="styled-range" id="inputRev" min="0" max="150000" step="2500" value="15000">
+            <div class="slider-bounds">
+              <span>$0/mo</span>
+              <span>$150k/mo</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dynamic Results Board -->
+        <div class="calc-results-board">
+          <div class="runway-primary-metric">
+            <div class="metric-subtitle">Estimated Runway Duration</div>
+            <div class="metric-big-number" id="runwayMonths">15.0 <span style="font-size: 1.5rem; font-weight: 500;">Months</span></div>
+            <div class="runway-health-badge" id="runwayBadge">
+              <i class="fa-solid fa-circle-check"></i> Safe Growth Zone
+            </div>
+            <div class="runway-bar-track">
+              <div class="runway-bar-fill" id="runwayBarFill" style="width: 65%;"></div>
+            </div>
+          </div>
+
+          <div class="metric-details-row">
+            <div class="metric-box">
+              <span>Net Monthly Burn</span>
+              <strong id="netBurnDisplay">-$30,000 /mo</strong>
+            </div>
+            <div class="metric-box">
+              <span>Zero Cash Horizon</span>
+              <strong id="zeroCashHorizon">Dec 2027</strong>
+            </div>
+          </div>
+
+          <div class="calc-insight-box">
+            <i class="fa-solid fa-lightbulb" style="color: var(--green); font-size: 1.1rem; margin-top: 2px;"></i>
+            <span id="insightText">Increasing MRR by just 15% extends your operating runway by an additional <strong>+3.8 months</strong> without dilutive equity.</span>
+          </div>
+
+          <a href="404.html" class="calc-cta-btn">
+            Generate Full Financial Model <i class="fa-solid fa-arrow-trend-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       NEW SECTION 2: INTEGRATIONS ECOSYSTEM HUB
+       ======================================================================== -->
+  <section id="integrations-hub">
+    <div class="container">
+      <div class="integ-header fade-in-up">
+        <div class="section-kicker">Unified Data Stack</div>
+        <h2>Seamlessly Sync with 100+ Leading Financial Tools</h2>
+        <p>No more manual reconciliations or CSV uploads. Connect your banks, payment gateways, and accounting stacks in just two clicks.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="integ-tabs fade-in-up">
+        <button class="integ-tab-btn active" data-category="all">All Tools</button>
+        <button class="integ-tab-btn" data-category="banking">Banking</button>
+        <button class="integ-tab-btn" data-category="accounting">Accounting</button>
+        <button class="integ-tab-btn" data-category="payments">Payments</button>
+        <button class="integ-tab-btn" data-category="payroll">Payroll & Tax</button>
+      </div>
+
+      <!-- Integrations Grid -->
+      <div class="integ-grid fade-in-up" id="integrationsGrid">
+        <!-- 1. Stripe -->
+        <div class="integ-card" data-category="payments">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-brands fa-stripe-s"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>Stripe</h4>
+          <p>Real-time MRR, gross churn, cohort retention, and subscription invoices.</p>
+          <span class="integ-category-tag">Payments</span>
+        </div>
+
+        <!-- 2. Mercury -->
+        <div class="integ-card" data-category="banking">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-solid fa-building-columns"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>Mercury</h4>
+          <p>Instant deposit visibility, automated wire ledgering, and FDIC account sync.</p>
+          <span class="integ-category-tag">Banking</span>
+        </div>
+
+        <!-- 3. QuickBooks -->
+        <div class="integ-card" data-category="accounting">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-solid fa-book-journal-whills"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>QuickBooks</h4>
+          <p>Bi-directional chart of accounts reconciliation and tax ledger mapping.</p>
+          <span class="integ-category-tag">Accounting</span>
+        </div>
+
+        <!-- 4. Plaid -->
+        <div class="integ-card" data-category="banking">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-solid fa-link"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>Plaid</h4>
+          <p>Bank-grade encrypted connection to 12,000+ North American and global institutions.</p>
+          <span class="integ-category-tag">Banking</span>
+        </div>
+
+        <!-- 5. Brex -->
+        <div class="integ-card" data-category="banking">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-solid fa-credit-card"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>Brex</h4>
+          <p>Real-time corporate card expenditure categorization and spend limits.</p>
+          <span class="integ-category-tag">Banking</span>
+        </div>
+
+        <!-- 6. Xero -->
+        <div class="integ-card" data-category="accounting">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-solid fa-chart-line"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>Xero</h4>
+          <p>Automated cloud accounting synchronization and multi-currency exchange rates.</p>
+          <span class="integ-category-tag">Accounting</span>
+        </div>
+
+        <!-- 7. Gusto -->
+        <div class="integ-card" data-category="payroll">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-solid fa-users"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>Gusto</h4>
+          <p>Full team payroll, contractor compensations, and employee benefit tracking.</p>
+          <span class="integ-category-tag">Payroll & Tax</span>
+        </div>
+
+        <!-- 8. Wise -->
+        <div class="integ-card" data-category="payments">
+          <div class="integ-card-top">
+            <div class="integ-icon-box"><i class="fa-solid fa-globe"></i></div>
+            <span class="integ-status-dot">Live Sync</span>
+          </div>
+          <h4>Wise</h4>
+          <p>Low-fee international cross-border transfers and multi-currency treasury.</p>
+          <span class="integ-category-tag">Payments</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       NEW SECTION 3: SPREADSHEETS VS STACKLY COMPARISON
+       ======================================================================== -->
+  <section id="comparison-section">
+    <div class="container">
+      <div class="comp-header fade-in-up">
+        <div class="section-kicker">The Smarter Alternative</div>
+        <h2>Why Founders Outgrow Spreadsheets & Legacy Tools</h2>
+        <p>Over 2,400+ fast-growing startup founders have transitioned from fragile spreadsheets to STACKLY.</p>
+      </div>
+
+      <div class="comp-cards-grid fade-in-up">
+        <!-- Legacy Card -->
+        <div class="comp-card legacy">
+          <span class="comp-badge"><i class="fa-solid fa-triangle-exclamation"></i> Fragmented & Fragile</span>
+          <h3>Traditional Spreadsheets & Manual Docs</h3>
+          <p class="comp-card-desc">Excel and Google Sheets are great for scratchpads, but dangerous for scaling multi-million dollar startup operations.</p>
+          
+          <ul class="comp-list">
+            <li>
+              <i class="fa-solid fa-circle-xmark comp-icon-bad"></i>
+              <span>Broken formulas and silent circular calculation bugs go unnoticed</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark comp-icon-bad"></i>
+              <span>Hours lost weekly doing manual CSV bank exports and duplicate entries</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark comp-icon-bad"></i>
+              <span>Static backward-looking snapshots with zero real-time cash runway clarity</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark comp-icon-bad"></i>
+              <span>Zero proactive alerts when runway dips below critical safety thresholds</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-xmark comp-icon-bad"></i>
+              <span>High risk of accidental data leaks when sharing sheets with external investors</span>
+            </li>
+          </ul>
+
+          <div class="comp-footer-highlight">
+            <div class="speed-metric" style="color: var(--text-muted);">
+              <strong style="color: #c93b3b;">18+ Hours</strong>
+              <span>Wasted every month on manual reconciliation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modern STACKLY Card -->
+        <div class="comp-card modern">
+          <span class="comp-badge"><i class="fa-solid fa-bolt"></i> Founder Preferred ⚡</span>
+          <h3>STACKLY Autonomous Finance Platform</h3>
+          <p class="comp-card-desc">An intelligent operating system that continuously ingests banking, payroll, and revenue data into investor-grade dashboards.</p>
+
+          <ul class="comp-list">
+            <li>
+              <i class="fa-solid fa-circle-check comp-icon-good"></i>
+              <span>100% automated 2-way real-time bank reconciliation and categorization</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check comp-icon-good"></i>
+              <span>Predictive ML algorithms model burn, cash flow, and runway with zero formula errors</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check comp-icon-good"></i>
+              <span>1-click investor-ready board reports and exportable GAAP-aligned summaries</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check comp-icon-good"></i>
+              <span>Real-time anomaly detection and instant overspending alert notifications</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-circle-check comp-icon-good"></i>
+              <span>Granular role-based security: Share live view links without exposing raw credentials</span>
+            </li>
+          </ul>
+
+          <div class="comp-footer-highlight">
+            <div class="speed-metric">
+              <strong>92% Faster</strong>
+              <span>Closing cycles and investor report prep</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PRICING SECTION
+       ======================================================================== -->
+  <section id="pricing">
+    <div class="container">
+      <div class="pricing-header-row">
+        <div class="pricing-title-wrap">
+          <div class="section-kicker">Simple, transparent pricing</div>
+          <h2>Save up to 20% with yearly billing</h2>
+        </div>
+
+        <!-- Monthly / Yearly Billing Switch -->
+        <div class="billing-switch" role="tablist">
+          <button class="switch-btn active" id="btnMonthly" role="tab" aria-selected="true">
+            <i class="fa-regular fa-calendar"></i> Monthly
+          </button>
+          <button class="switch-btn" id="btnYearly" role="tab" aria-selected="false">
+            <i class="fa-solid fa-bolt"></i> Yearly
+            <span class="save-pill-tag">Save 20%</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="pricing-grid">
+        <!-- Card 1: Free Plan -->
+        <div class="pricing-card">
+          <div class="plan-top-info">
+            <div class="plan-top-icon"><i class="fa-solid fa-seedling"></i></div>
+            <span class="plan-name">Free Plan</span>
+          </div>
+          <p class="plan-subtitle">Solo founders and freelancers</p>
+          <div class="plan-price-display">
+            <span class="currency">$</span><span class="price-num" data-monthly="0" data-yearly="0">0</span>
+            <span class="period">/per month</span>
+          </div>
+          
+          <div class="plan-features-label">Including Features:</div>
+          <ul class="plan-features-list">
+            <li><i class="fa-solid fa-check"></i> Basic cash flow tracking</li>
+            <li><i class="fa-solid fa-check"></i> Expense management</li>
+            <li><i class="fa-solid fa-check"></i> Access to financial reports (limited)</li>
+            <li><i class="fa-solid fa-check"></i> No integrations or automation</li>
+          </ul>
+
+          <a href="404.html"><button class="plan-cta-btn">Start Free Trial</button></a>
+        </div>
+
+        <!-- Card 2: Growth Plan (Featured) -->
+        <div class="pricing-card featured-card">
+          <div class="featured-header-part">
+            <div class="plan-top-info">
+              <div class="plan-top-icon"><i class="fa-solid fa-bolt"></i></div>
+              <span class="plan-name">Growth Plan</span>
+            </div>
+            <p class="plan-subtitle">Startups preparing for growth</p>
+            <div class="plan-price-display">
+              <span class="currency">$</span><span class="price-num" data-monthly="29" data-yearly="23">29</span>
+              <span class="period">/per month</span>
+            </div>
+          </div>
+
+          <div class="featured-white-body">
+            <div class="plan-features-label">Including Features:</div>
+            <ul class="plan-features-list">
+              <li><i class="fa-solid fa-check"></i> AI-powered forecasting</li>
+              <li><i class="fa-solid fa-check"></i> Bank & accounting integrations</li>
+              <li><i class="fa-solid fa-check"></i> Smart alerts for financial risks</li>
+              <li><i class="fa-solid fa-check"></i> Team collaboration (2 users)</li>
+            </ul>
+
+            <a href="404.html"><button class="plan-cta-btn">Request a Demo</button></a>
+          </div>
+        </div>
+
+        <!-- Card 3: Pro Plan -->
+        <div class="pricing-card">
+          <div class="plan-top-info">
+            <div class="plan-top-icon"><i class="fa-solid fa-crown"></i></div>
+            <span class="plan-name">Pro Plan</span>
+          </div>
+          <p class="plan-subtitle">Startups scaling and seeking investor funding</p>
+          <div class="plan-price-display">
+            <span class="currency">$</span><span class="price-num" data-monthly="89" data-yearly="71">89</span>
+            <span class="period">/per month</span>
+          </div>
+
+          <div class="plan-features-label">Including Features:</div>
+          <ul class="plan-features-list">
+            <li><i class="fa-solid fa-check"></i> Automated invoice & billing</li>
+            <li><i class="fa-solid fa-check"></i> Subscription revenue tracking</li>
+            <li><i class="fa-solid fa-check"></i> Custom financial dashboards</li>
+            <li><i class="fa-solid fa-check"></i> API & third-party integrations</li>
+          </ul>
+
+          <a href="404.html"><button class="plan-cta-btn">Start Free Trial</button></a>
+        </div>
+      </div>
+
+      <!-- Guarantee Badges under Pricing -->
+      <div class="pricing-guarantee-bar">
+        <div class="guarantee-item">
+          <div class="guarantee-icon"><i class="fa-solid fa-wallet"></i></div>
+          <div class="guarantee-text">
+            <h5>Money Back Guarantee</h5>
+            <p>Get 14 days money back guarantee on any purchases.</p>
+          </div>
+        </div>
+
+        <div class="guarantee-item">
+          <div class="guarantee-icon"><i class="fa-solid fa-shield-check"></i></div>
+          <div class="guarantee-text">
+            <h5>SSL Secure Payments</h5>
+            <p>We use industry standard payment systems to facilitate online payments.</p>
+          </div>
+        </div>
+
+        <div class="guarantee-item">
+          <div class="guarantee-icon"><i class="fa-solid fa-credit-card"></i></div>
+          <div class="guarantee-text">
+            <h5>Accepted Payment Methods</h5>
+            <div class="payment-badges-row">
+              <span class="pay-badge-pill">Visa</span>
+              <span class="pay-badge-pill">Mastercard</span>
+              <span class="pay-badge-pill">Stripe</span>
+              <span class="pay-badge-pill">PayPal</span>
+              <span class="pay-badge-pill">Apple Pay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- ========================================================================
+       NEW SECTION 4: INTERACTIVE FAQ ACCORDION
+       ======================================================================== -->
+  <section id="faq-section">
+    <div class="container">
+      <div class="faq-header fade-in-up">
+        <div class="section-kicker">Got Questions?</div>
+        <h2>Frequently Asked Questions</h2>
+        <p>Everything you need to know about getting started, bank integrations, team collaboration, and security.</p>
+      </div>
+
+      <div class="faq-accordion-list fade-in-up" id="faqAccordion">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <button class="faq-question-btn" aria-expanded="true">
+            <span>How fast can I get STACKLY set up with my existing bank accounts?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>Setup takes less than 3 minutes. Connect your accounts securely via Plaid, Stripe, or direct banking OAuth, and STACKLY automatically ingests and categorizes your historical transaction history from the past 12 months with zero manual spreadsheet work.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How does the 14-day free trial work? Is a credit card required?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>You can sign up for our 14-day free trial without entering a credit card. You get unrestricted access to all Growth tier features, including scenario runway modeling, multi-bank syncing, and automated investor reporting.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>How secure is my sensitive financial, accounting, and investor data?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>We take security extremely seriously. STACKLY runs on SOC-2 Type II compliant infrastructure with 256-bit AES encryption at rest and TLS 1.3 in transit. We maintain strictly read-only connections to your financial institutions and never store your banking credentials.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>Can I invite my external bookkeepers, co-founders, and investors?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>Yes! You can invite your co-founders, bookkeepers, and board members with granular role-based permissions (Admin, Editor, Read-Only, or Investor View) so stakeholders only see the exact metrics they are authorized to view.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>What happens if our startup scales rapidly or raises a new round?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>STACKLY is engineered to scale with you from pre-seed to IPO. You can seamlessly expand your plan to support multiple business entities, custom tax jurisdictions, multi-currency treasuries, and dedicated financial advisory support with zero data migration downtime.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question-btn" aria-expanded="false">
+            <span>Can I cancel or change my plan anytime? Can I export my data?</span>
+            <div class="faq-icon-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+          </button>
+          <div class="faq-answer-pane">
+            <p>Yes, absolutely. You can upgrade, downgrade, or cancel your subscription at any time with a single click. If you ever decide to leave, you can export all your financial reports, forecasts, and raw reconciled transactions in CSV or PDF formats at any time.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CTA BANNER WITH EMAIL SUBSCRIBE FORM
+       ======================================================================== -->
+  <section id="cta-banner">
+    <div class="container">
+      <div class="cta-banner-card fade-in-up">
+        <div class="cta-banner-bg"></div>
+        <div class="cta-banner-content">
+          <h2>Ready to Take Control of Your Finances?</h2>
+          <form class="subscribe-form" id="subscribeForm" action="404.html" method="get" onsubmit="window.location.href='404.html'; return false;">
+            <input type="email" class="subscribe-input" id="emailInput" placeholder="Your Mail Address" required>
+            <button type="submit" class="subscribe-btn" id="subscribeBtn">
+              Subscribe <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+            </button>
+          </form>
+          <div id="subscribeSuccessMsg" style="display: none; color: var(--lime); margin-top: 14px; font-weight: 600; font-size: 0.95rem;">
+            ✓ Thank you! You've been added to our early access priority list.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer id="footer">
+    <div class="container">
+      <!-- STACKLY Company Headquarters & Contact Info Bar -->
+      <div style="background: var(--cream); border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 30px 36px; margin-bottom: 50px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="background: var(--green); border-radius: 14px; padding: 6px 10px; display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.webp" alt="STACKLY Logo" style="height: 40px; width: auto; display: block; filter: brightness(0) invert(1);">
+          </div>
+          <div>
+            <p style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 7px;">
+              <i class="fa-solid fa-location-dot" style="color: var(--green);"></i> Salem, Tamil Nadu, India
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <a href="tel:9876543210" style="background: var(--white); border: 1.5px solid var(--border-light); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm); transition: var(--transition);">
+            <i class="fa-solid fa-phone" style="color: #299b45;"></i> +91 98765 43210
+          </a>
+          <a href="mailto:contact@stackly.com" style="background: var(--green); color: var(--white); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; transition: var(--transition);">
+            <i class="fa-solid fa-envelope" style="color: var(--lime);"></i> contact@stackly.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-grid">
+        <div class="footer-col">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Discover</h5>
+          <ul>
+            <li><a href="404.html">Terms & Privacy</a></li>
+            <li><a href="404.html">Security</a></li>
+            <li><a href="404.html">Changelog</a></li>
+            <li><a href="404.html">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="404.html">About STACKLY</a></li>
+            <li><a href="404.html">Salem Headquarters</a></li>
+            <li><a href="404.html">Careers</a></li>
+            <li><a href="404.html">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Insights</h5>
+          <ul>
+            <li><a href="404.html">Startup Blog</a></li>
+            <li><a href="404.html">Runway Calculator</a></li>
+            <li><a href="404.html">Cap Table Guide</a></li>
+            <li><a href="404.html">License</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Help & Support</h5>
+          <ul>
+            <li><a href="404.html">Ph: +91 98765 43210</a></li>
+            <li><a href="404.html">Salem, Tamil Nadu, India</a></li>
+            <li><a href="404.html">Documentation</a></li>
+            <li><a href="404.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <!-- Social Icons -->
+        <div class="footer-social-links">
+          <a href="404.html" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Twitter / X"><span style="font-size: 1rem; font-weight: 700; font-family: serif; line-height: 1;">𝕏</span></a>
+        </div>
+
+        <!-- App Store Buttons -->
+        <div class="footer-app-badges">
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-android"></i> Download on Android
+          </a>
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-apple"></i> Download on iOS
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <span>© STACKLY 2024. All rights reserved. Salem, Tamil Nadu, India. Ph: <a href="404.html" style="color: var(--green); font-weight: 700;">+91 98765 43210</a></span>
+          <span>Financial Clarity for Startup Founders</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       JAVASCRIPT: INTERACTION & SCROLL CONTROLS
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. STICKY HEADER ON SCROLL
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // 2. MOBILE MENU TOGGLE
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener('click', () => {
+          mobileNav.classList.toggle('open');
+          const isOpen = mobileNav.classList.contains('open');
+          mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        // Close mobile nav when clicking any nav link
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      // 3. TESTIMONIALS CAROUSEL SCROLL (REQUIREMENT: make this section scroll while click the arrow)
+      const slider = document.getElementById('testimonialsSlider');
+      const prevBtn = document.getElementById('prevTestimonial');
+      const nextBtn = document.getElementById('nextTestimonial');
+
+      if (slider && prevBtn && nextBtn) {
+        const getScrollDistance = () => {
+          const firstCard = slider.querySelector('.testimonial-card');
+          return firstCard ? firstCard.offsetWidth + 24 : 550; // card width + gap
+        };
+
+        nextBtn.addEventListener('click', () => {
+          const scrollDistance = getScrollDistance();
+          const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+          
+          if (slider.scrollLeft >= maxScrollLeft - 10) {
+            // Loop back to start if at the end
+            slider.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            slider.scrollBy({ left: scrollDistance, behavior: 'smooth' });
+          }
+        });
+
+        prevBtn.addEventListener('click', () => {
+          const scrollDistance = getScrollDistance();
+          
+          if (slider.scrollLeft <= 10) {
+            // Loop to the end if at beginning
+            slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+          } else {
+            slider.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
+          }
+        });
+      }
+
+      // 4. PRICING TOGGLE (Monthly vs Yearly)
+      const btnMonthly = document.getElementById('btnMonthly');
+      const btnYearly = document.getElementById('btnYearly');
+      const priceNumbers = document.querySelectorAll('.price-num');
+      const periods = document.querySelectorAll('.plan-price-display .period');
+
+      if (btnMonthly && btnYearly) {
+        btnMonthly.addEventListener('click', () => {
+          btnMonthly.classList.add('active');
+          btnMonthly.setAttribute('aria-selected', 'true');
+          btnYearly.classList.remove('active');
+          btnYearly.setAttribute('aria-selected', 'false');
+
+          priceNumbers.forEach(price => {
+            price.textContent = price.getAttribute('data-monthly');
+          });
+          periods.forEach(period => {
+            period.textContent = '/per month';
+          });
+        });
+
+        btnYearly.addEventListener('click', () => {
+          btnYearly.classList.add('active');
+          btnYearly.setAttribute('aria-selected', 'true');
+          btnMonthly.classList.remove('active');
+          btnMonthly.setAttribute('aria-selected', 'false');
+
+          priceNumbers.forEach(price => {
+            price.textContent = price.getAttribute('data-yearly');
+          });
+          periods.forEach(period => {
+            period.textContent = '/month, billed yearly';
+          });
+        });
+      }
+
+      // 7. RUNWAY & CASH FLOW SIMULATOR LOGIC
+      const inputCash = document.getElementById('inputCash');
+      const inputBurn = document.getElementById('inputBurn');
+      const inputRev = document.getElementById('inputRev');
+      const valCash = document.getElementById('valCash');
+      const valBurn = document.getElementById('valBurn');
+      const valRev = document.getElementById('valRev');
+      const runwayMonths = document.getElementById('runwayMonths');
+      const runwayBadge = document.getElementById('runwayBadge');
+      const runwayBarFill = document.getElementById('runwayBarFill');
+      const netBurnDisplay = document.getElementById('netBurnDisplay');
+      const zeroCashHorizon = document.getElementById('zeroCashHorizon');
+      const insightText = document.getElementById('insightText');
+
+      function updateRunway() {
+        if (!inputCash || !inputBurn || !inputRev) return;
+        const cash = parseFloat(inputCash.value);
+        const burn = parseFloat(inputBurn.value);
+        const rev = parseFloat(inputRev.value);
+
+        valCash.textContent = '$' + cash.toLocaleString();
+        valBurn.textContent = '$' + burn.toLocaleString();
+        valRev.textContent = '$' + rev.toLocaleString();
+
+        const netBurn = burn - rev;
+        if (netBurn <= 0) {
+          runwayMonths.innerHTML = '∞ <span style="font-size: 1.5rem; font-weight: 500;">Profitable</span>';
+          runwayBadge.innerHTML = '<i class="fa-solid fa-crown"></i> Cash Flow Positive';
+          runwayBadge.style.backgroundColor = '#e4f5e7';
+          runwayBadge.style.color = '#1a7431';
+          runwayBarFill.style.width = '100%';
+          runwayBarFill.style.background = '#299b45';
+          netBurnDisplay.textContent = '+$' + Math.abs(netBurn).toLocaleString() + ' /mo (Net Profit)';
+          zeroCashHorizon.textContent = 'Indefinite (Profitable)';
+          insightText.innerHTML = 'Congratulations! Your business is self-sustaining and generating cash every month.';
+        } else {
+          const months = (cash / netBurn).toFixed(1);
+          runwayMonths.innerHTML = months + ' <span style="font-size: 1.5rem; font-weight: 500;">Months</span>';
+          
+          // Horizon date calculation
+          const today = new Date();
+          today.setMonth(today.getMonth() + Math.round(parseFloat(months)));
+          const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+          zeroCashHorizon.textContent = monthNames[today.getMonth()] + ' ' + today.getFullYear();
+          netBurnDisplay.textContent = '-$' + netBurn.toLocaleString() + ' /mo';
+
+          // Badge & bar
+          const fillPercent = Math.min(100, Math.max(5, (months / 24) * 100));
+          runwayBarFill.style.width = fillPercent + '%';
+
+          if (months >= 18) {
+            runwayBadge.innerHTML = '<i class="fa-solid fa-circle-check"></i> Safe Growth Zone';
+            runwayBadge.style.backgroundColor = '#e4f5e7';
+            runwayBadge.style.color = '#1a7431';
+            runwayBarFill.style.background = 'linear-gradient(90deg, #c4d93d, #299b45)';
+            insightText.innerHTML = `Increasing MRR by just 15% extends your operating runway by an additional <strong>+${(months * 0.15).toFixed(1)} months</strong> without dilutive equity.`;
+          } else if (months >= 10) {
+            runwayBadge.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Moderate Runway';
+            runwayBadge.style.backgroundColor = '#fff7dd';
+            runwayBadge.style.color = '#966d00';
+            runwayBarFill.style.background = 'linear-gradient(90deg, #ffd159, #c4d93d)';
+            insightText.innerHTML = `You have healthy runway, but consider preparing your Series A or reducing non-core subscriptions to reach 18+ months.`;
+          } else {
+            runwayBadge.innerHTML = '<i class="fa-solid fa-bell"></i> Action Recommended';
+            runwayBadge.style.backgroundColor = '#fdeeee';
+            runwayBadge.style.color = '#c93b3b';
+            runwayBarFill.style.background = '#e04c4c';
+            insightText.innerHTML = `Runway is under 10 months. Founders typically begin bridge rounds or optimize cost structures now.`;
+          }
+        }
+      }
+
+      if (inputCash && inputBurn && inputRev) {
+        inputCash.addEventListener('input', updateRunway);
+        inputBurn.addEventListener('input', updateRunway);
+        inputRev.addEventListener('input', updateRunway);
+        updateRunway();
+      }
+
+      // 8. INTEGRATIONS FILTER TABS
+      const integTabs = document.querySelectorAll('.integ-tab-btn');
+      const integCards = document.querySelectorAll('.integ-card');
+
+      integTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          integTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const category = tab.getAttribute('data-category');
+          integCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 9. FAQ ACCORDION TOGGLE
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question-btn');
+        if (btn) {
+          btn.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            // Close other items
+            faqItems.forEach(i => {
+              i.classList.remove('active');
+              const b = i.querySelector('.faq-question-btn');
+              if (b) b.setAttribute('aria-expanded', 'false');
+            });
+
+            // Toggle clicked item
+            if (!isActive) {
+              item.classList.add('active');
+              btn.setAttribute('aria-expanded', 'true');
+            }
+          });
+        }
+      });
+
+      // 5. INTERSECTION OBSERVER FOR FADE-IN ANIMATIONS
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    });
+
+    // 6. NEWSLETTER SUBSCRIBE HANDLER
+    function handleSubscribe() {
+      const emailInput = document.getElementById('emailInput');
+      const btn = document.getElementById('subscribeBtn');
+      const msg = document.getElementById('subscribeSuccessMsg');
+      
+      if (emailInput && emailInput.value) {
+        btn.innerHTML = 'Subscribing...';
+        setTimeout(() => {
+          btn.innerHTML = 'Subscribed ✓';
+          msg.style.display = 'block';
+          emailInput.value = '';
+        }, 600);
+      }
+    }
+  </script>
+</body>
+</html>

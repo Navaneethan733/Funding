@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights — STACKLY Founder Financial Library</title>
+  <meta name="description" content="Master startup unit economics, cap table dilution, cash runway extension, and venture fundraising with guides written by operators and fractional CFOs.">
+  
+  <!-- Google Fonts: Inter & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header id="main-header">
+    <div class="container header-container">
+      <!-- Logo -->
+      <a href="index.html" class="brand-logo" aria-label="STACKLY Home">
+        <img src="images/logo.webp" alt="STACKLY Logo" style="height: 48px; width: auto; display: block;">
+      </a>
+
+      <!-- Pill Nav for Desktop -->
+      <nav class="nav-pill-wrapper" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="service.html" class="nav-link">Services</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact Us</a>
+      </nav>
+
+      <!-- Header CTA & Contact Phone -->
+      <div class="header-cta-wrapper" style="display: flex; align-items: center; gap: 16px;">
+        <a href="tel:9876543210" class="header-phone-link" style="color: rgba(255,255,255,0.9); font-size: 0.86rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;">
+          <i class="fa-solid fa-phone" style="color: var(--lime); font-size: 0.8rem;"></i> +91 98765 43210
+        </a>
+        <a href="login.html" class="btn btn-lime header-cta-btn">
+          Login <i class="fa-solid fa-arrow-trend-up icon-arrow-diag"></i>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle Navigation Menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div class="mobile-dropdown" id="mobileNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="service.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="contact.html" class="nav-link">Contact Us</a>
+      <div style="padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 6px;">
+        <a href="tel:9876543210" style="color: var(--lime); font-weight: 700; display: flex; align-items: center; gap: 8px;">
+          <i class="fa-solid fa-phone"></i> +91 98765 43210
+        </a>
+        <span><i class="fa-solid fa-location-dot" style="color: var(--lime); margin-right: 6px;"></i> Salem, Tamil Nadu, India</span>
+      </div>
+      <a href="login.html" class="btn btn-lime" style="margin-top: 6px; width: 100%;">
+        Login <i class="fa-solid fa-arrow-trend-up"></i>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       SECTION 1: BLOG HERO & FEATURED EDITORIAL (Scroll Animation)
+       ======================================================================== -->
+  <div class="page-hero-wrapper" id="blog-hero">
+    <div class="container page-hero-grid">
+      <div class="page-hero-content scroll-reveal">
+        <div class="section-tag-pill">
+          <i class="fa-solid fa-newspaper"></i> Featured Editorial • 8 Min Read
+        </div>
+        <h1 class="page-hero-title">The 2026 Startup Runway Playbook for Founders.</h1>
+        <p class="page-hero-desc">
+          How top tech companies manage capital allocation, calculate true burn multiples, and structure non-dilutive financing in high-interest rate markets.
+        </p>
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 24px;">
+          <img src="images/img_1534528741775-5.webp" alt="Author avatar" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--lime);">
+          <div>
+            <div style="font-weight: 700; color: var(--white); font-size: 0.95rem;">Navaneethan R. & Dr. Julian Ross</div>
+            <div style="font-size: 0.8rem; color: rgba(255,255,255,0.7);">Published Sept 2026 • Financial Intelligence</div>
+          </div>
+        </div>
+        <a href="404.html" class="btn btn-lime">Read Full Whitepaper <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="page-hero-visual reveal-right">
+        <div class="page-hero-img-card">
+          <img src="images/img_1551836022-deb4.webp" alt="Modern financial analytics graph on laptop">
+          <div class="hero-floating-stat">
+            <div class="stat-icon"><i class="fa-solid fa-fire"></i></div>
+            <div>
+              <div style="font-size: 1.15rem; font-weight: 800; color: var(--lime);">Trending #1</div>
+              <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85);">Read by 42,000+ Startup Founders</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 2: CATEGORY FILTER & SEARCH BAR (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 40px 0 20px; background-color: var(--white);" id="blog-filter">
+    <div class="container">
+      <div class="blog-filter-bar scroll-reveal">
+        <div class="blog-pills" id="categoryFilterPills">
+          <button class="blog-pill-btn active" data-filter="all">All Insights</button>
+          <button class="blog-pill-btn" data-filter="runway">Runway & Burn</button>
+          <button class="blog-pill-btn" data-filter="fundraising">Fundraising & VCs</button>
+          <button class="blog-pill-btn" data-filter="tax">Tax & Compliance</button>
+          <button class="blog-pill-btn" data-filter="metrics">SaaS Metrics</button>
+          <button class="blog-pill-btn" data-filter="cfo">Fractional CFO</button>
+        </div>
+
+        <div class="blog-search-box">
+          <i class="fa-solid fa-magnifying-glass" style="color: var(--text-muted); font-size: 0.9rem;"></i>
+          <input type="text" id="blogSearchInput" placeholder="Search financial guides...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 3: TRENDING ARTICLES GRID (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 20px 0 90px; background-color: var(--white);" id="blog-trending">
+    <div class="container">
+      <div class="blog-articles-grid" id="blogGrid">
+        <!-- Article 1 -->
+        <article class="blog-card scroll-reveal" data-category="metrics">
+          <div class="blog-card-img-wrap">
+            <img src="images/img_1551288049-bebd.webp" alt="Burn multiple chart visualization" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-top">
+              <span style="color: var(--green); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">SaaS Metrics</span>
+              <span>6 Min Read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="404.html">Rule of 40 vs Burn Multiple: Which Metric Do Tier-1 VCs Prioritize Most?</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              A comprehensive breakdown of how top venture partners evaluate capital efficiency in pre-Series B software businesses.
+            </p>
+            <div class="blog-card-author">
+              <img src="images/img_1507003211169-0.webp" alt="Julian Ross avatar" class="blog-author-img">
+              <div>
+                <strong style="font-size: 0.85rem; color: var(--text-dark); display: block;">Dr. Julian Ross, CFA</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Sept 12, 2026</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card scroll-reveal" style="transition-delay: 0.1s;" data-category="fundraising">
+          <div class="blog-card-img-wrap">
+            <img src="images/img_1557804506-669a.webp" alt="Pitch deck and investor dataroom" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-top">
+              <span style="color: var(--green); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">Fundraising</span>
+              <span>9 Min Read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="404.html">How to Architect an Investor-Grade Financial Data Room in 48 Hours</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Avoid diligence delays with our step-by-step checklist of historical ledgers, cap table waterfalls, and customer cohort files.
+            </p>
+            <div class="blog-card-author">
+              <img src="images/img_1534528741775-5.webp" alt="Elena Vance avatar" class="blog-author-img">
+              <div>
+                <strong style="font-size: 0.85rem; color: var(--text-dark); display: block;">Navaneethan R.</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Sept 08, 2026</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card scroll-reveal" style="transition-delay: 0.2s;" data-category="tax">
+          <div class="blog-card-img-wrap">
+            <img src="images/img_1450133064473-7.webp" alt="Legal tax filing documents" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-top">
+              <span style="color: var(--green); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">Tax & Compliance</span>
+              <span>7 Min Read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="404.html">Demystifying 83(b) Elections, QSBS, and Section 174 Software Amortization</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Critical tax maneuvers every tech founder must file early to avoid six-figure surprises upon liquidation or acquisition.
+            </p>
+            <div class="blog-card-author">
+              <img src="images/img_1500648767791-0.webp" alt="David Sterling avatar" class="blog-author-img">
+              <div>
+                <strong style="font-size: 0.85rem; color: var(--text-dark); display: block;">David Sterling, CPA</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Sept 03, 2026</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card scroll-reveal" data-category="runway">
+          <div class="blog-card-img-wrap">
+            <img src="images/img_1559526324-4b87.webp" alt="Global banking currencies" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-top">
+              <span style="color: var(--green); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">Runway & Burn</span>
+              <span>5 Min Read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="404.html">Navigating Multi-Currency Treasuries and FX Slippage in Distributed Startups</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Practical tactics to lock in foreign exchange rates and prevent phantom currency losses across global payroll hubs.
+            </p>
+            <div class="blog-card-author">
+              <img src="images/img_1573496359142-b.webp" alt="Priya Natarajan avatar" class="blog-author-img">
+              <div>
+                <strong style="font-size: 0.85rem; color: var(--text-dark); display: block;">Priya Natarajan</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Aug 29, 2026</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="blog-card scroll-reveal" style="transition-delay: 0.1s;" data-category="cfo">
+          <div class="blog-card-img-wrap">
+            <img src="images/img_1460925895917-a.webp" alt="Financial analytics dashboard on tablet" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-top">
+              <span style="color: var(--green); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">Fractional CFO</span>
+              <span>8 Min Read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="404.html">When to Hire Your First In-House Controller vs a Fractional CFO Platform</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              Discover the optimal revenue milestones ($1M vs $5M ARR) to transition your financial operations from outsourced to in-house.
+            </p>
+            <div class="blog-card-author">
+              <img src="images/img_1507003211169-0.webp" alt="Julian Ross avatar" class="blog-author-img">
+              <div>
+                <strong style="font-size: 0.85rem; color: var(--text-dark); display: block;">Dr. Julian Ross, CFA</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Aug 21, 2026</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="blog-card scroll-reveal" style="transition-delay: 0.2s;" data-category="tax">
+          <div class="blog-card-img-wrap">
+            <img src="images/img_1526304640581-d.webp" alt="Research laboratory tech" class="blog-card-img">
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta-top">
+              <span style="color: var(--green); font-weight: 700; text-transform: uppercase; font-size: 0.75rem;">Tax & Compliance</span>
+              <span>11 Min Read</span>
+            </div>
+            <h3 class="blog-card-title">
+              <a href="404.html">Unlocking Non-Dilutive Federal & State R&D Tax Credits in 2026</a>
+            </h3>
+            <p class="blog-card-excerpt">
+              How early-stage engineering teams can offset payroll tax obligations by documenting proprietary code and infrastructure research.
+            </p>
+            <div class="blog-card-author">
+              <img src="images/img_1500648767791-0.webp" alt="David Sterling avatar" class="blog-author-img">
+              <div>
+                <strong style="font-size: 0.85rem; color: var(--text-dark); display: block;">David Sterling, CPA</strong>
+                <span style="font-size: 0.75rem; color: var(--text-muted);">Aug 14, 2026</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 4: DOWNLOADABLE FINANCIAL TEMPLATES & GUIDES (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--cream);" id="blog-guides">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-file-arrow-down"></i> Founder Toolkits
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Institutional-Grade Financial Templates
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Free downloadable spreadsheets and modeling sheets vetted by Tier-1 venture funds and startup incubators.
+        </p>
+      </div>
+
+      <div class="case-study-grid">
+        <!-- Guide 1 -->
+        <div class="case-card scroll-reveal">
+          <div>
+            <div style="width: 52px; height: 52px; background: var(--green-dark); color: var(--lime); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px;">
+              <i class="fa-solid fa-table"></i>
+            </div>
+            <h4 style="font-size: 1.25rem; color: var(--green-dark); margin-bottom: 12px;">Seed-to-Series A 3-Statement Financial Model</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px;">
+              Fully dynamic Excel & Google Sheets model including hiring plans, revenue drivers, churn waterfalls, and cash burn projections.
+            </p>
+          </div>
+          <a href="404.html" class="btn btn-dark" style="width: 100%;">
+            Download .XLSX Template <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+
+        <!-- Guide 2 -->
+        <div class="case-card scroll-reveal" style="transition-delay: 0.1s;">
+          <div>
+            <div style="width: 52px; height: 52px; background: var(--green-dark); color: var(--lime); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px;">
+              <i class="fa-solid fa-chart-pie"></i>
+            </div>
+            <h4 style="font-size: 1.25rem; color: var(--green-dark); margin-bottom: 12px;">Cap Table & SAFE Dilution Simulator</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px;">
+              Calculate post-money valuation impact, unallocated option pool expansions, and MFN clause conversions before signing term sheets.
+            </p>
+          </div>
+          <a href="404.html" class="btn btn-dark" style="width: 100%;">
+            Download .XLSX Template <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+
+        <!-- Guide 3 -->
+        <div class="case-card scroll-reveal" style="transition-delay: 0.2s;">
+          <div>
+            <div style="width: 52px; height: 52px; background: var(--green-dark); color: var(--lime); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px;">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </div>
+            <h4 style="font-size: 1.25rem; color: var(--green-dark); margin-bottom: 12px;">Investor Board Deck Presentation Pack</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 24px;">
+              15 slide Figma & Keynote template featuring pre-formatted burn charts, cohort retention curves, and revenue growth highlights.
+            </p>
+          </div>
+          <a href="404.html" class="btn btn-dark" style="width: 100%;">
+            Download Deck Pack <i class="fa-solid fa-download"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 5: FOUNDER SPOTLIGHT & INTERVIEWS (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--white);" id="blog-spotlights">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-microphone-lines"></i> Founder Stories
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          Behind the Numbers: Raw Founder Deep Dives
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Real entrepreneurs opening up their books and sharing the most terrifying cash moments on their road to profitability.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px;">
+        <!-- Spotlight 1 -->
+        <div class="scroll-reveal" style="background: var(--cream); border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-light); display: flex; flex-direction: column;">
+          <div style="position: relative; height: 260px;">
+            <img src="images/img_1519085360753-a.webp" alt="Founder discussing funding" style="width: 100%; height: 100%; object-fit: cover;">
+            <a href="404.html" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.35); color: var(--white); font-size: 2.8rem; text-decoration: none;">
+              <i class="fa-solid fa-circle-play" style="color: var(--lime);"></i>
+            </a>
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--green); font-weight: 700; font-size: 0.78rem; text-transform: uppercase;">Episode #42 • 28 Mins</span>
+              <h4 style="font-size: 1.3rem; color: var(--green-dark); margin: 6px 0 12px;">"We had 37 days of cash left when our Series A lead pulled out."</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+                How Brian Vance renegotiated AWS enterprise credits, shifted 60% of annual subscriptions to upfront prepay, and achieved cash-flow breakeven.
+              </p>
+            </div>
+            <a href="404.html" style="color: var(--green); font-weight: 700; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
+              Watch Video & Read Breakdown <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Spotlight 2 -->
+        <div class="scroll-reveal" style="transition-delay: 0.1s; background: var(--cream); border-radius: var(--radius-lg); overflow: hidden; border: 1.5px solid var(--border-light); display: flex; flex-direction: column;">
+          <div style="position: relative; height: 260px;">
+            <img src="images/img_1573496359142-b.webp" alt="Female fintech executive" style="width: 100%; height: 100%; object-fit: cover;">
+            <a href="404.html" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.35); color: var(--white); font-size: 2.8rem; text-decoration: none;">
+              <i class="fa-solid fa-circle-play" style="color: var(--lime);"></i>
+            </a>
+          </div>
+          <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <span style="color: var(--green); font-weight: 700; font-size: 0.78rem; text-transform: uppercase;">Episode #43 • 34 Mins</span>
+              <h4 style="font-size: 1.3rem; color: var(--green-dark); margin: 6px 0 12px;">"Scaling to $10M ARR with 14 people and a 3.4x Burn Efficiency."</h4>
+              <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+                Cynthia Zhao reveals why automated financial controls beat hiring large overhead accounting teams during rapid global enterprise expansion.
+              </p>
+            </div>
+            <a href="404.html" style="color: var(--green); font-weight: 700; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 8px;">
+              Watch Video & Read Breakdown <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 6: STARTUP METRICS GLOSSARY (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--cream);" id="blog-glossary">
+    <div class="container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;" class="scroll-reveal">
+        <div class="section-tag-pill dark-tag">
+          <i class="fa-solid fa-book-bookmark"></i> Quick Reference
+        </div>
+        <h2 style="font-size: clamp(2rem, 3.2vw, 2.7rem); color: var(--green-dark); margin-bottom: 16px;">
+          The Founder's Financial Cheat Sheet
+        </h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem;">
+          Instant clarity on the exact formulas and target benchmarks investors look for in board meetings.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <!-- Metric 1 -->
+        <div class="value-card scroll-reveal">
+          <span style="font-size: 0.78rem; font-weight: 800; color: var(--green); text-transform: uppercase;">Capital Efficiency</span>
+          <h4 style="font-size: 1.25rem; margin: 6px 0 8px; color: var(--green-dark);">Burn Multiple</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Net Burn divided by Net New ARR. Measures how much cash is burned to generate each $1 of new annual recurring revenue.
+          </p>
+          <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-xs); font-size: 0.82rem; font-weight: 700; color: var(--green);">
+            Target: &lt; 1.2x (Excellent)
+          </div>
+        </div>
+
+        <!-- Metric 2 -->
+        <div class="value-card scroll-reveal" style="transition-delay: 0.1s;">
+          <span style="font-size: 0.78rem; font-weight: 800; color: var(--green); text-transform: uppercase;">Retention</span>
+          <h4 style="font-size: 1.25rem; margin: 6px 0 8px; color: var(--green-dark);">Net Dollar Retention</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Starting ARR + Expansion - Contraction - Churn. Demonstrates organic expansion of existing client accounts.
+          </p>
+          <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-xs); font-size: 0.82rem; font-weight: 700; color: var(--green);">
+            Target: &gt; 115% for SaaS
+          </div>
+        </div>
+
+        <!-- Metric 3 -->
+        <div class="value-card scroll-reveal" style="transition-delay: 0.2s;">
+          <span style="font-size: 0.78rem; font-weight: 800; color: var(--green); text-transform: uppercase;">Acquisition</span>
+          <h4 style="font-size: 1.25rem; margin: 6px 0 8px; color: var(--green-dark);">CAC Payback</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Total sales and marketing spend divided by gross profit from new customers added. Time required to break even on acquisition.
+          </p>
+          <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-xs); font-size: 0.82rem; font-weight: 700; color: var(--green);">
+            Target: &lt; 12 Months
+          </div>
+        </div>
+
+        <!-- Metric 4 -->
+        <div class="value-card scroll-reveal" style="transition-delay: 0.3s;">
+          <span style="font-size: 0.78rem; font-weight: 800; color: var(--green); text-transform: uppercase;">Sales Velocity</span>
+          <h4 style="font-size: 1.25rem; margin: 6px 0 8px; color: var(--green-dark);">Magic Number</h4>
+          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+            Quarterly ARR growth annualized divided by prior quarter's sales & marketing expense. Measures efficiency of sales scaling.
+          </p>
+          <div style="background: var(--white); padding: 8px 12px; border-radius: var(--radius-xs); font-size: 0.82rem; font-weight: 700; color: var(--green);">
+            Target: &gt; 0.85x
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       SECTION 7: WEEKLY NEWSLETTER DISPATCH CTA (Scroll Animation)
+       ======================================================================== -->
+  <div style="padding: 100px 0; background-color: var(--green-dark);" id="blog-newsletter">
+    <div class="container">
+      <div class="cta-banner-card scroll-reveal" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.12);">
+        <div class="cta-banner-content" style="text-align: center; max-width: 820px; margin: 0 auto;">
+          <div class="section-tag-pill" style="margin-bottom: 20px;">
+            <i class="fa-solid fa-paper-plane"></i> The Sunday Financial Dispatch
+          </div>
+          <h2 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); color: var(--white); margin-bottom: 18px; line-height: 1.15;">
+            Join 45,000+ Founders Reading Our Weekly Deep-Dives
+          </h2>
+          <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; line-height: 1.6; margin-bottom: 34px;">
+            Every Sunday morning, we break down one real startup financial failure, one cap table optimization tactic, and the latest VC term sheet trends. Zero spam, 100% actionable.
+          </p>
+
+          <form class="subscribe-form" action="404.html" method="get" onsubmit="window.location.href='404.html'; return false;" style="max-width: 540px; margin: 0 auto 24px;">
+            <input type="email" class="subscribe-input" placeholder="Your work email address" required>
+            <button type="submit" class="subscribe-btn">
+              Subscribe Free <i class="fa-solid fa-arrow-trend-up"></i>
+            </button>
+          </form>
+
+          <div style="display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; color: rgba(255,255,255,0.7); font-size: 0.88rem;">
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> Curated by seasoned CFOs</span>
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> One-click instant unsubscribe</span>
+            <span><i class="fa-solid fa-check" style="color: var(--lime); margin-right: 6px;"></i> No promotional sponsorships</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer id="footer">
+    <div class="container">
+      <!-- STACKLY Company Headquarters & Contact Info Bar -->
+      <div style="background: var(--cream); border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 30px 36px; margin-bottom: 50px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="background: var(--green); border-radius: 14px; padding: 6px 10px; display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.webp" alt="STACKLY Logo" style="height: 40px; width: auto; display: block; filter: brightness(0) invert(1);">
+          </div>
+          <div>
+            <h4 style="font-size: 1.15rem; color: var(--green-dark); margin-bottom: 2px;">STACKLY Technologies Inc.</h4>
+            <p style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 7px;">
+              <i class="fa-solid fa-location-dot" style="color: var(--green);"></i> Salem, Tamil Nadu, India
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
+          <a href="tel:9876543210" style="background: var(--white); border: 1.5px solid var(--border-light); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm); transition: var(--transition);">
+            <i class="fa-solid fa-phone" style="color: #299b45;"></i> +91 98765 43210
+          </a>
+          <a href="mailto:contact@stackly.com" style="background: var(--green); color: var(--white); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; transition: var(--transition);">
+            <i class="fa-solid fa-envelope" style="color: var(--lime);"></i> contact@stackly.com
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-nav-grid">
+        <div class="footer-col">
+          <h5>Get Started</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Discover</h5>
+          <ul>
+            <li><a href="404.html">Terms & Privacy</a></li>
+            <li><a href="404.html">Security</a></li>
+            <li><a href="404.html">Changelog</a></li>
+            <li><a href="404.html">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="404.html">About STACKLY</a></li>
+            <li><a href="404.html">Salem Headquarters</a></li>
+            <li><a href="404.html">Careers</a></li>
+            <li><a href="404.html">Press Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Insights</h5>
+          <ul>
+            <li><a href="404.html">Startup Blog</a></li>
+            <li><a href="404.html">Runway Calculator</a></li>
+            <li><a href="404.html">Cap Table Guide</a></li>
+            <li><a href="404.html">License</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Help & Support</h5>
+          <ul>
+            <li><a href="404.html">Ph: +91 98765 43210</a></li>
+            <li><a href="404.html">Salem, Tamil Nadu, India</a></li>
+            <li><a href="404.html">Documentation</a></li>
+            <li><a href="404.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <!-- Social Icons -->
+        <div class="footer-social-links">
+          <a href="404.html" class="social-circle-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404.html" class="social-circle-btn" aria-label="Twitter / X"><span style="font-size: 1rem; font-weight: 700; font-family: serif; line-height: 1;">𝕏</span></a>
+        </div>
+
+        <!-- App Store Buttons -->
+        <div class="footer-app-badges">
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-android"></i> Download on Android
+          </a>
+          <a href="404.html" class="store-pill-btn">
+            <i class="fa-brands fa-apple"></i> Download on iOS
+          </a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-copyright">
+          <span>© STACKLY 2024. All rights reserved. Salem, Tamil Nadu, India. Ph: <a href="tel:9876543210" style="color: var(--green); font-weight: 700;">+91 98765 43210</a></span>
+          <span>Financial Clarity for Startup Founders</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       JAVASCRIPT: INTERSECTION OBSERVER SCROLL ANIMATIONS, SEARCH & FILTERS
+       ======================================================================== -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Sticky header
+      const header = document.getElementById('main-header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 40) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+
+      // Mobile menu toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileNav = document.getElementById('mobileNav');
+      if (mobileBtn && mobileNav) {
+        mobileBtn.addEventListener('click', () => {
+          mobileNav.classList.toggle('open');
+          const isOpen = mobileNav.classList.contains('open');
+          mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        document.querySelectorAll('.mobile-dropdown .nav-link').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        });
+      }
+
+      // Intersection Observer for Scroll Animations
+      const animElements = document.querySelectorAll('.scroll-reveal, .reveal-left, .reveal-right, .reveal-scale, .fade-in-up');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      animElements.forEach(el => observer.observe(el));
+
+      // Category filter pills
+      const filterBtns = document.querySelectorAll('.blog-pill-btn');
+      const cards = document.querySelectorAll('.blog-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+          cards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Live search filter
+      const searchInput = document.getElementById('blogSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          cards.forEach(card => {
+            const title = card.querySelector('.blog-card-title').textContent.toLowerCase();
+            const desc = card.querySelector('.blog-card-excerpt').textContent.toLowerCase();
+            if (title.includes(query) || desc.includes(query)) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
