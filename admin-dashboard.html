@@ -306,24 +306,261 @@
       background: #fffdf5;
     }
 
-    /* Mobile overrides */
-    @media (max-width: 1024px) {
+    /* Dashboard Sub-Navigation Menu */
+    .dash-subnav {
+      background: var(--green);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .dash-subnav::-webkit-scrollbar { display: none; }
+    .dash-subnav-inner {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 0 20px;
+      min-width: max-content;
+    }
+    .subnav-link {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.86rem;
+      font-weight: 600;
+      padding: 12px 18px;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .subnav-link:hover { color: var(--lime); }
+    .subnav-link.active {
+      color: var(--lime);
+      border-bottom-color: var(--lime);
+    }
+
+    /* Mobile dash menu toggle */
+    .dash-mobile-menu-btn {
+      display: none;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: var(--white);
+      border-radius: 8px;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .dash-mobile-nav {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      padding: 16px 20px;
+      background: var(--green-dark);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .dash-mobile-nav.open { display: flex; }
+    .dash-mobile-nav a {
+      color: rgba(255,255,255,0.85);
+      font-size: 0.94rem;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+    .dash-mobile-nav a:hover { background: rgba(255,255,255,0.1); color: var(--lime); }
+
+    /* Dashboard Action Buttons (redirecting to 404) */
+    .dash-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 7px 15px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+      white-space: nowrap;
+      border: 1px solid transparent;
+      line-height: 1.2;
+    }
+    .dash-btn-lime {
+      background: var(--lime);
+      color: var(--text-dark);
+      box-shadow: 0 2px 8px rgba(212, 232, 76, 0.25);
+    }
+    .dash-btn-lime:hover {
+      background: var(--lime-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(212, 232, 76, 0.4);
+      color: var(--text-dark);
+    }
+    .dash-btn-outline {
+      background: transparent;
+      border-color: var(--border-light);
+      color: var(--green-dark);
+    }
+    .dash-btn-outline:hover {
+      background: var(--cream);
+      border-color: var(--green);
+      color: var(--green);
+      transform: translateY(-1px);
+    }
+    .dash-btn-dark {
+      background: var(--green-dark);
+      color: var(--white);
+    }
+    .dash-btn-dark:hover {
+      background: #17241c;
+      color: var(--lime);
+      transform: translateY(-1px);
+    }
+    .dash-sec-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    /* Medium breakpoint: tablet */
+    @media (max-width: 880px) {
       .kpi-grid-4 {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 640px) {
+      /* Show mobile menu btn, hide desktop subnav */
+      .dash-mobile-menu-btn { display: flex; }
+      .dash-subnav { display: none; }
+
+      /* Header: prevent overflow by hiding extra elements */
+      .dash-header-flex {
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+      }
+      .dash-brand-wrap {
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .dash-role-badge {
+        font-size: 0.68rem;
+        padding: 3px 8px;
+      }
+      /* Hide status pill and sign out link on mobile */
+      .dash-status-pill,
+      .dash-nav-links { display: none; }
+
+      /* On mobile: hide profile text, show avatar only */
+      .dash-profile-text { display: none; }
+      .dash-profile-chip {
+        padding: 4px 6px;
+        gap: 0;
+      }
+
+      /* KPI grid: single column on small mobile */
+      .kpi-grid-4 {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+
+      /* Reduce section card padding */
+      .dash-section-card {
+        padding: 18px 14px;
+        margin-bottom: 20px;
+        border-radius: 14px;
+      }
+
+      /* Reduce main top padding */
+      .dash-main {
+        padding: 24px 0 60px;
+      }
+
+      /* Title bar */
+      .dash-title-bar {
+        margin-bottom: 20px;
+      }
+      .dash-title-bar h1 {
+        font-size: 1.4rem;
+      }
+      .dash-title-bar p {
+        font-size: 0.88rem;
+      }
+
+      /* Section header: stack on mobile */
+      .dash-sec-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+      }
+      .dash-sec-title {
+        font-size: 1rem;
+        gap: 7px;
+      }
+      .dash-sec-actions {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 6px;
+      }
+      .dash-btn {
+        padding: 6px 12px;
+        font-size: 0.78rem;
+      }
+
+      /* KPI card */
+      .kpi-card {
+        padding: 16px 14px;
+      }
+      .kpi-val {
+        font-size: 1.5rem;
+      }
+      .kpi-label {
+        font-size: 0.75rem;
+      }
+      .kpi-change {
+        font-size: 0.73rem;
+      }
+
+      /* Table: reduce padding */
+      .dash-table th,
+      .dash-table td {
+        padding: 10px 10px;
+        font-size: 0.82rem;
+      }
+
+      /* Stream feed items */
+      .stream-item {
+        padding: 12px 12px;
+        gap: 8px;
+        font-size: 0.82rem;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Very small phones: collapse to single column */
+    @media (max-width: 360px) {
       .kpi-grid-4 {
         grid-template-columns: 1fr;
       }
       .dash-section-card {
-        padding: 22px 18px;
+        padding: 14px 10px;
       }
-      .dash-header-flex {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .kpi-val { font-size: 1.3rem; }
     }
   </style>
 </head>
@@ -335,34 +572,73 @@
   <header class="dash-header">
     <div class="container dash-header-flex">
       <div class="dash-brand-wrap">
-        <a href="index.html" style="display: block;">
+        <a href="login.html" style="display: block;" aria-label="STACKLY Logo - Redirect to Login">
           <img src="images/logo.webp" alt="STACKLY Logo" style="height: 42px; width: auto; filter: brightness(0) invert(1);">
         </a>
         <span class="dash-role-badge">ADMIN CONSOLE</span>
       </div>
 
-      <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+      <div class="dash-header-right" style="display: flex; align-items: center; gap: 14px; flex-wrap: nowrap; min-width: 0;">
         <div class="dash-status-pill">
           <span class="dash-status-dot"></span> Cluster Node: Asia-South (Salem Enclave)
         </div>
 
         <!-- Profile Chip -->
-        <div style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 6px 16px 6px 8px;">
+        <div class="dash-profile-chip" style="display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 6px 16px 6px 8px; min-width: 0;">
           <div style="width: 32px; height: 32px; background: var(--lime); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
             <span id="adminAvatarInitials" style="font-size: 0.78rem; font-weight: 800; color: var(--green-dark);">A</span>
           </div>
-          <div style="line-height: 1.2;">
-            <div id="adminProfileName" style="font-size: 0.88rem; font-weight: 700; color: var(--white);">Admin</div>
-            <div style="font-size: 0.72rem; color: var(--lime); font-weight: 600;">Platform Administrator</div>
+          <div class="dash-profile-text" style="line-height: 1.2; min-width: 0; overflow: hidden;">
+            <div id="adminProfileName" style="font-size: 0.88rem; font-weight: 700; color: var(--white); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Admin</div>
+            <div style="font-size: 0.72rem; color: var(--lime); font-weight: 600; white-space: nowrap;">Platform Administrator</div>
           </div>
         </div>
 
         <div class="dash-nav-links">
           <a href="login.html" class="dash-nav-link" id="adminSignOutBtn">Sign Out</a>
         </div>
+
+        <!-- Mobile menu toggle -->
+        <button class="dash-mobile-menu-btn" id="adminMobileMenuBtn" aria-label="Toggle Dashboard Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
     </div>
   </header>
+
+  <!-- Dashboard Sub-Navigation Menu (Desktop Scrollable) -->
+  <nav class="dash-subnav" aria-label="Admin Dashboard Sections">
+    <div class="dash-subnav-inner">
+      <a href="#admin-telemetry" class="subnav-link active">
+        <i class="fa-solid fa-chart-line"></i> Telemetry
+      </a>
+      <a href="#admin-portfolio" class="subnav-link">
+        <i class="fa-solid fa-building-columns"></i> Portfolios
+      </a>
+      <a href="#admin-integrations" class="subnav-link">
+        <i class="fa-solid fa-plug"></i> Integrations
+      </a>
+      <a href="#admin-audit" class="subnav-link">
+        <i class="fa-solid fa-file-shield"></i> Audit Logs
+      </a>
+      <a href="#admin-risk" class="subnav-link">
+        <i class="fa-solid fa-triangle-exclamation"></i> Risk Matrix
+      </a>
+      <a href="#admin-infrastructure" class="subnav-link">
+        <i class="fa-solid fa-server"></i> Infrastructure
+      </a>
+    </div>
+  </nav>
+
+  <!-- Mobile Dashboard Sub-Navigation -->
+  <div class="dash-mobile-nav" id="adminMobileNav">
+    <a href="#admin-telemetry"><i class="fa-solid fa-chart-line"></i> Telemetry</a>
+    <a href="#admin-portfolio"><i class="fa-solid fa-building-columns"></i> Portfolios</a>
+    <a href="#admin-integrations"><i class="fa-solid fa-plug"></i> Integrations</a>
+    <a href="#admin-audit"><i class="fa-solid fa-file-shield"></i> Audit Logs</a>
+    <a href="#admin-risk"><i class="fa-solid fa-triangle-exclamation"></i> Risk Matrix</a>
+    <a href="#admin-infrastructure"><i class="fa-solid fa-server"></i> Infrastructure</a>
+  </div>
 
   <!-- ========================================================================
        MAIN DASHBOARD: 6 SECTIONS (No Buttons)
@@ -371,20 +647,29 @@
     <div class="container">
       
       <!-- Dashboard Title Bar -->
-      <div class="dash-title-bar">
-        <h1>Institutional Platform Governance</h1>
-        <p>Continuous telemetry, multi-tenant portfolio metrics, and ledger reconciliation feeds across 482 active startups.</p>
+      <div class="dash-title-bar" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h1>Institutional Platform Governance</h1>
+          <p>Continuous telemetry, multi-tenant portfolio metrics, and ledger reconciliation feeds across 482 active startups.</p>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+          <a href="404.html" class="dash-btn dash-btn-lime"><i class="fa-solid fa-file-export"></i> Export Audit Report</a>
+          <a href="404.html" class="dash-btn dash-btn-dark"><i class="fa-solid fa-sliders"></i> Platform Settings</a>
+        </div>
       </div>
 
       <!-- ====================================================================
            SECTION 1: GLOBAL PLATFORM HEALTH & SYSTEM KPI MATRIX
            ==================================================================== -->
-      <div class="dash-section-card">
+      <div class="dash-section-card" id="admin-telemetry">
         <div class="dash-sec-head">
           <div class="dash-sec-title">
             <i class="fa-solid fa-chart-line"></i> Section 1: Global Platform Telemetry & Volume
           </div>
-          <span class="dash-sec-tag">Real-Time Sensor 100ms</span>
+          <div class="dash-sec-actions">
+            <span class="dash-sec-tag">Real-Time Sensor 100ms</span>
+            <a href="404.html" class="dash-btn dash-btn-outline"><i class="fa-solid fa-download"></i> Telemetry CSV</a>
+          </div>
         </div>
 
         <div class="kpi-grid-4">
@@ -417,12 +702,16 @@
       <!-- ====================================================================
            SECTION 2: ENTERPRISE TENANT & PORTFOLIO OVERSIGHT
            ==================================================================== -->
-      <div class="dash-section-card">
+      <div class="dash-section-card" id="admin-portfolio">
         <div class="dash-sec-head">
           <div class="dash-sec-title">
             <i class="fa-solid fa-building-columns"></i> Section 2: Portfolio Companies & Runway Health
           </div>
-          <span class="dash-sec-tag">Active Seed & Series Cohorts</span>
+          <div class="dash-sec-actions">
+            <span class="dash-sec-tag">Active Seed & Series Cohorts</span>
+            <a href="404.html" class="dash-btn dash-btn-lime"><i class="fa-solid fa-plus"></i> Add Startup</a>
+            <a href="404.html" class="dash-btn dash-btn-outline"><i class="fa-solid fa-table"></i> Export Cohort</a>
+          </div>
         </div>
 
         <div class="dash-table-wrap">
@@ -486,12 +775,15 @@
       <!-- ====================================================================
            SECTION 3: GLOBAL LIQUIDITY & MULTI-CURRENCY TREASURY ENCLAVES
            ==================================================================== -->
-      <div class="dash-section-card">
+      <div class="dash-section-card" id="admin-integrations">
         <div class="dash-sec-head">
           <div class="dash-sec-title">
             <i class="fa-solid fa-vault"></i> Section 3: Treasury Enclaves & Sweep Balances
           </div>
-          <span class="dash-sec-tag">FDIC Insured Sweep Network</span>
+          <div class="dash-sec-actions">
+            <span class="dash-sec-tag">FDIC Insured Sweep Network</span>
+            <a href="404.html" class="dash-btn dash-btn-outline"><i class="fa-solid fa-arrows-rotate"></i> Rebalance Reserves</a>
+          </div>
         </div>
 
         <div class="kpi-grid-4">
@@ -528,12 +820,15 @@
       <!-- ====================================================================
            SECTION 4: AI RECONCILIATION & TRANSACTION INGESTION FEED
            ==================================================================== -->
-      <div class="dash-section-card">
+      <div class="dash-section-card" id="admin-audit">
         <div class="dash-sec-head">
           <div class="dash-sec-title">
             <i class="fa-solid fa-microchip"></i> Section 4: Live Ledger Ingestion Stream
           </div>
-          <span class="dash-sec-tag">Sub-Second Processing</span>
+          <div class="dash-sec-actions">
+            <span class="dash-sec-tag">Sub-Second Processing</span>
+            <a href="404.html" class="dash-btn dash-btn-outline"><i class="fa-solid fa-filter"></i> Ingestion Filter</a>
+          </div>
         </div>
 
         <div class="stream-feed">
@@ -598,12 +893,15 @@
       <!-- ====================================================================
            SECTION 5: RISK EXPOSURE & ANOMALY DETECTION WATCHLIST
            ==================================================================== -->
-      <div class="dash-section-card">
+      <div class="dash-section-card" id="admin-risk">
         <div class="dash-sec-head">
           <div class="dash-sec-title">
             <i class="fa-solid fa-triangle-exclamation" style="color: #d49511;"></i> Section 5: Risk Monitoring & Burn Acceleration Radar
           </div>
-          <span class="dash-sec-tag">Automated Threat Engine</span>
+          <div class="dash-sec-actions">
+            <span class="dash-sec-tag">Automated Threat Engine</span>
+            <a href="404.html" class="dash-btn dash-btn-outline"><i class="fa-solid fa-shield-virus"></i> Security Scan</a>
+          </div>
         </div>
 
         <div class="stream-feed">
@@ -645,12 +943,16 @@
       <!-- ====================================================================
            SECTION 6: REGULATORY COMPLIANCE & IMMUTABLE AUDIT TRAIL
            ==================================================================== -->
-      <div class="dash-section-card" style="margin-bottom: 0;">
+      <div class="dash-section-card" id="admin-infrastructure" style="margin-bottom: 0;">
         <div class="dash-sec-head">
           <div class="dash-sec-title">
             <i class="fa-solid fa-fingerprint"></i> Section 6: Cryptographic Audit Trail & Governance Log
           </div>
-          <span class="dash-sec-tag">SOC-2 Type II Certified</span>
+          <div class="dash-sec-actions">
+            <span class="dash-sec-tag">SOC-2 Type II Certified</span>
+            <a href="404.html" class="dash-btn dash-btn-outline"><i class="fa-solid fa-certificate"></i> SOC-2 Report</a>
+            <a href="404.html" class="dash-btn dash-btn-lime"><i class="fa-solid fa-lock"></i> Verify Root Hash</a>
+          </div>
         </div>
 
         <div class="dash-table-wrap">
@@ -729,6 +1031,41 @@
         });
       }
     })();
+
+    // Mobile dashboard menu toggle
+    const adminMobileMenuBtn = document.getElementById('adminMobileMenuBtn');
+    const adminMobileNav = document.getElementById('adminMobileNav');
+    if (adminMobileMenuBtn && adminMobileNav) {
+      adminMobileMenuBtn.addEventListener('click', () => {
+        adminMobileNav.classList.toggle('open');
+        const isOpen = adminMobileNav.classList.contains('open');
+        adminMobileMenuBtn.innerHTML = isOpen
+          ? '<i class="fa-solid fa-xmark"></i>'
+          : '<i class="fa-solid fa-bars"></i>';
+      });
+      // Close on nav link click
+      adminMobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          adminMobileNav.classList.remove('open');
+          adminMobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
+      });
+    }
+
+    // Subnav active state on scroll
+    const subnavLinks = document.querySelectorAll('.subnav-link');
+    const sections = ['admin-telemetry','admin-portfolio','admin-integrations','admin-audit','admin-risk','admin-infrastructure'];
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 120) current = id;
+      });
+      subnavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    });
   </script>
 
 </body>

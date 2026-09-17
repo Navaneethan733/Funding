@@ -56,13 +56,23 @@
 
     <!-- Mobile Dropdown Navigation -->
     <div class="mobile-dropdown" id="mobileNav">
+      <!-- Mobile Menu Header with Close Button -->
+      <div class="mobile-dropdown-header" style="display: flex; align-items: center; justify-content: space-between; width: 100%; padding-bottom: 14px; margin-bottom: 8px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+        <a href="index.html" class="brand-logo" aria-label="STACKLY Home" style="display: flex; align-items: center; gap: 8px; text-decoration: none;">
+          <img src="images/logo.webp" alt="STACKLY Logo" style="height: 38px; width: auto; display: block;">
+        </a>
+        <button class="mobile-menu-close" id="mobileMenuCloseBtn" aria-label="Close Navigation Menu" style="width: 42px; height: 42px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.25); color: #ffffff; font-size: 1.25rem; font-weight: 700; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.2s ease;">
+          <i class="fa-solid fa-xmark">✕</i>
+        </button>
+      </div>
+
       <a href="index.html" class="nav-link">Home</a>
       <a href="service.html" class="nav-link">Services</a>
       <a href="about.html" class="nav-link active">About Us</a>
       <a href="blog.html" class="nav-link">Blog</a>
       <a href="contact.html" class="nav-link">Contact Us</a>
       <div style="padding: 10px 14px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 6px; font-size: 0.85rem; color: rgba(255,255,255,0.85); display: flex; flex-direction: column; gap: 6px;">
-        <a href="tel:9876543210" style="color: var(--lime); font-weight: 700; display: flex; align-items: center; gap: 8px;">
+        <a href="contact.html" style="color: var(--lime); font-weight: 700; display: flex; align-items: center; gap: 8px;">
           <i class="fa-solid fa-phone"></i> +91 98765 43210
         </a>
         <span><i class="fa-solid fa-location-dot" style="color: var(--lime); margin-right: 6px;"></i> Salem, Tamil Nadu, India</span>
@@ -207,8 +217,8 @@
         <!-- Value 1 -->
         <div class="value-card scroll-reveal">
           <div class="value-icon"><i class="fa-solid fa-eye"></i></div>
-          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Radical Transparency</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px;">Radical Transparency</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6;">
             No hidden assumptions, no hand-waving estimates. Every metric, chart, and runway projection links directly to verified source bank ledgers.
           </p>
         </div>
@@ -216,8 +226,8 @@
         <!-- Value 2 -->
         <div class="value-card scroll-reveal" style="transition-delay: 0.1s;">
           <div class="value-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Founder Obsession</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px;">Founder Obsession</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6;">
             We design every interface and report to save founders cognitive load so they can focus on shipping game-changing products.
           </p>
         </div>
@@ -225,8 +235,8 @@
         <!-- Value 3 -->
         <div class="value-card scroll-reveal" style="transition-delay: 0.2s;">
           <div class="value-icon"><i class="fa-solid fa-calculator"></i></div>
-          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Mathematical Rigor</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px;">Mathematical Rigor</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6;">
             We treat financial ledgers with the exact zero-error tolerance of cryptographic databases. Every cent is reconciled and verified.
           </p>
         </div>
@@ -234,8 +244,8 @@
         <!-- Value 4 -->
         <div class="value-card scroll-reveal" style="transition-delay: 0.3s;">
           <div class="value-icon"><i class="fa-solid fa-bolt"></i></div>
-          <h4 style="font-size: 1.22rem; margin-bottom: 10px; color: var(--green-dark);">Speed Without Compromise</h4>
-          <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+          <h4 style="font-size: 1.22rem; margin-bottom: 10px;">Speed Without Compromise</h4>
+          <p style="font-size: 0.88rem; line-height: 1.6;">
             Monthly financial closes shouldn't take 3 weeks. We close books in 48 hours without cutting corners on compliance or tax rigor.
           </p>
         </div>
@@ -484,9 +494,9 @@
       <!-- STACKLY Company Headquarters & Contact Info Bar -->
       <div style="background: var(--cream); border: 1.5px solid var(--border-light); border-radius: var(--radius-lg); padding: 30px 36px; margin-bottom: 50px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
         <div style="display: flex; align-items: center; gap: 16px;">
-          <div style="background: var(--green); border-radius: 14px; padding: 6px 10px; display: flex; align-items: center; justify-content: center;">
+          <a href="index.html" aria-label="STACKLY Home" style="background: var(--green); border-radius: 14px; padding: 6px 10px; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: transform 0.2s ease;">
             <img src="images/logo.webp" alt="STACKLY Logo" style="height: 40px; width: auto; display: block; filter: brightness(0) invert(1);">
-          </div>
+          </a>
           <div>
             <h4 style="font-size: 1.15rem; color: var(--green-dark); margin-bottom: 2px;">STACKLY Technologies Inc.</h4>
             <p style="font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: center; gap: 7px;">
@@ -496,7 +506,7 @@
         </div>
 
         <div style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap;">
-          <a href="tel:9876543210" style="background: var(--white); border: 1.5px solid var(--border-light); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm); transition: var(--transition);">
+          <a href="contact.html" style="background: var(--white); border: 1.5px solid var(--border-light); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 700; color: var(--green); display: inline-flex; align-items: center; gap: 9px; box-shadow: var(--shadow-sm); transition: var(--transition);">
             <i class="fa-solid fa-phone" style="color: #299b45;"></i> +91 98765 43210
           </a>
           <a href="mailto:contact@stackly.com" style="background: var(--green); color: var(--white); padding: 12px 24px; border-radius: var(--radius-full); font-size: 0.92rem; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; transition: var(--transition);">
@@ -550,7 +560,7 @@
         <div class="footer-col">
           <h5>Help & Support</h5>
           <ul>
-            <li><a href="404.html">Ph: +91 98765 43210</a></li>
+            <li><a href="contact.html">Ph: +91 98765 43210</a></li>
             <li><a href="404.html">Salem, Tamil Nadu, India</a></li>
             <li><a href="404.html">Documentation</a></li>
             <li><a href="404.html">API Reference</a></li>
@@ -579,7 +589,7 @@
 
         <!-- Copyright -->
         <div class="footer-copyright">
-          <span>© STACKLY 2024. All rights reserved. Salem, Tamil Nadu, India. Ph: <a href="tel:9876543210" style="color: var(--green); font-weight: 700;">+91 98765 43210</a></span>
+          <span>© STACKLY Technologies Inc. 2024. All rights reserved. Salem, Tamil Nadu, India. Ph: <a href="contact.html" style="color: var(--green); font-weight: 700;">+91 98765 43210</a></span>
           <span>Financial Clarity for Startup Founders</span>
         </div>
       </div>
@@ -604,6 +614,8 @@
       // Mobile menu toggle
       const mobileBtn = document.getElementById('mobileMenuBtn');
       const mobileNav = document.getElementById('mobileNav');
+      const mobileCloseBtn = document.getElementById('mobileMenuCloseBtn');
+
       if (mobileBtn && mobileNav) {
         mobileBtn.addEventListener('click', () => {
           mobileNav.classList.toggle('open');
@@ -611,7 +623,14 @@
           mobileBtn.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
         });
 
-        document.querySelectorAll('.mobile-dropdown .nav-link').forEach(link => {
+        if (mobileCloseBtn) {
+          mobileCloseBtn.addEventListener('click', () => {
+            mobileNav.classList.remove('open');
+            mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+          });
+        }
+
+        mobileNav.querySelectorAll('.nav-link, .btn').forEach(link => {
           link.addEventListener('click', () => {
             mobileNav.classList.remove('open');
             mobileBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';

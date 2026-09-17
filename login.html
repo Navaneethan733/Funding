@@ -381,6 +381,9 @@
     .form-group {
       margin-bottom: 20px;
       position: relative;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     .form-group label {
@@ -396,6 +399,9 @@
       position: relative;
       display: flex;
       align-items: center;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
 
     .input-wrapper > i:first-child {
@@ -411,6 +417,8 @@
     .form-group input,
     .form-group select {
       width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
       padding: 15px 18px 15px 48px;
       border: 1.5px solid var(--border-light);
       border-radius: 14px;
@@ -808,18 +816,23 @@
     @media (max-width: 500px) {
       body {
         padding: 0;
+        overflow-x: hidden;
       }
 
       .auth-wrapper {
         border-radius: 0;
         min-height: 100vh;
         max-width: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        box-sizing: border-box;
       }
 
       .auth-visual {
         border-radius: 0;
         padding: 30px 24px;
         min-height: 220px;
+        box-sizing: border-box;
       }
 
       .visual-logo {
@@ -831,12 +844,25 @@
       }
 
       .auth-form-panel {
-        padding: 32px 24px;
+        padding: 28px 18px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
       }
 
       .auth-top-bar {
-        gap: 14px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        gap: 12px;
         margin-bottom: 20px;
+      }
+
+      .auth-tabs {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
       }
 
       .auth-top-bar .go-back-btn {
@@ -905,7 +931,9 @@
       <div class="float-icon float-icon-3"><i class="fas fa-shield-alt"></i></div>
 
       <div class="visual-logo">
-        <img src="images/logo.webp" alt="STACKLY Logo" style="height: 52px; width: auto; display: block;">
+        <a href="index.html" aria-label="STACKLY Home" style="display: inline-block; text-decoration: none;">
+          <img src="images/logo.webp" alt="STACKLY Logo" style="height: 52px; width: auto; display: block;">
+        </a>
       </div>
 
       <div class="visual-content">
@@ -988,7 +1016,7 @@
             <label class="remember-me">
               <input type="checkbox" id="rememberMe"> Remember me
             </label>
-            <a href="#" class="forgot-link">Forgot password?</a>
+            <a href="404.html" class="forgot-link">Forgot password?</a>
           </div>
 
           <button type="submit" class="btn-submit">
@@ -1056,7 +1084,7 @@
 
           <label class="terms-check">
             <input type="checkbox" id="termsCheck">
-            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
+            <span>I agree to the <a href="404.html">Terms of Service</a> and <a href="404.html">Privacy Policy</a>.</span>
           </label>
 
           <button type="submit" class="btn-submit">
