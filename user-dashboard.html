@@ -377,6 +377,27 @@
     }
     .dash-mobile-nav a:hover { background: rgba(255,255,255,0.1); color: var(--lime); }
 
+    /* Mobile Sign Out Button in Header */
+    .dash-mobile-signout-btn {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #ffb3b3;
+      background: rgba(255, 80, 80, 0.15);
+      border: 1px solid rgba(255, 80, 80, 0.35);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .dash-mobile-signout-btn:hover {
+      background: rgba(255, 80, 80, 0.3);
+      color: #fff;
+    }
+
     /* Dashboard Action Buttons (redirecting to 404) */
     .dash-btn {
       display: inline-flex;
@@ -446,6 +467,9 @@
       .dash-subnav { display: none; }
 
       /* Header: prevent overflow */
+      .dash-header {
+        padding: 12px 0;
+      }
       .dash-header-flex {
         flex-wrap: nowrap;
         align-items: center;
@@ -454,15 +478,30 @@
       }
       .dash-brand-wrap {
         gap: 8px;
-        flex-shrink: 0;
+        flex-shrink: 1;
+        min-width: 0;
+        overflow: hidden;
       }
-      .dash-user-badge {
-        font-size: 0.68rem;
-        padding: 3px 8px;
+      .dash-brand-wrap img {
+        height: 34px !important;
       }
+      /* Hide badge on mobile to save space */
+      .dash-user-badge { display: none; }
       /* Hide company pill, sign out link on mobile */
       .dash-company-pill,
       .dash-nav-links { display: none; }
+
+      /* Show mobile header sign out button */
+      .dash-mobile-signout-btn { display: inline-flex; }
+
+      /* Header right: tight flex row */
+      .dash-header-right {
+        display: flex !important;
+        align-items: center;
+        gap: 8px !important;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+      }
 
       /* On mobile: hide profile text, show avatar only */
       .dash-profile-text { display: none; }
@@ -558,6 +597,16 @@
       }
     }
 
+    /* Very small phones: compact signout */
+    @media (max-width: 380px) {
+      .dash-mobile-signout-btn span {
+        display: none;
+      }
+      .dash-mobile-signout-btn {
+        padding: 6px 9px;
+      }
+    }
+
     /* Very small phones: collapse to single column */
     @media (max-width: 360px) {
       .kpi-grid-4, .dept-grid {
@@ -578,7 +627,7 @@
   <header class="dash-header">
     <div class="container dash-header-flex">
       <div class="dash-brand-wrap">
-        <a href="login.html" style="display: block;" aria-label="STACKLY Logo - Redirect to Login">
+        <a href="user-dashboard.html" style="display: block;" aria-label="STACKLY Logo - Redirect to Login">
           <img src="images/logo.webp" alt="STACKLY Logo" style="height: 42px; width: auto; filter: brightness(0) invert(1);">
         </a>
         <span class="dash-user-badge">FOUNDER PORTAL</span>
@@ -644,6 +693,11 @@
     <a href="#user-captable"><i class="fa-solid fa-chart-pie"></i> Cap Table Distribution</a>
     <a href="#user-dept"><i class="fa-solid fa-building"></i> Department Budgets</a>
     <a href="#user-milestones"><i class="fa-solid fa-flag-checkered"></i> Milestones & Targets</a>
+    <div style="border-top: 1px solid rgba(255,255,255,0.12); margin-top: 8px; padding-top: 8px;">
+      <a href="login.html" style="color: #ff9999; font-weight: 700; display: flex; align-items: center; gap: 9px; padding: 10px 14px; border-radius: 8px; background: rgba(255, 77, 77, 0.15); border: 1px solid rgba(255, 77, 77, 0.3);">
+        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+      </a>
+    </div>
   </div>
 
   <!-- ========================================================================
